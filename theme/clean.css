@@ -1,9 +1,29 @@
 body {
-    
+    font-family: Arial;
+    font-size: 28px;
+    color: #444;
 }
 
-section {
-    position: absolute;
-    display: none;
-    
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+
+h3 {
+    color: #999;
+    font-style: italic;
+}
+
+p {
+    width: 70%;
+}
+
+img {
+    float:right;
+    padding-top: 2em;
+    padding-right: 1em;
 }
