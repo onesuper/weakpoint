@@ -1,0 +1,34 @@
+/*
+ * weakpoint.js
+ * (c) 2012 onesuper
+ */
+
+var weakpoint = (function() {
+
+    
+
+    function initialize() {
+	alert(1);
+	addEventListeners();
+    }
+
+    function addEventListeners() {
+	document.addEventListener('keydown', onDocumentKeyDown, false);
+    }
+
+    function onDocumentKeyDown(event) {
+	switch(event.keyCode) {
+	case 80: case 33: previousPage();alert("p");break;
+	case 78: case 34: nextPage();alert("n");break;    
+	}
+    }
+
+
+
+    function previousPage() {
+	var allPages = document.querySelectorAll('section');
+    }
+
+    
+    
+})();
