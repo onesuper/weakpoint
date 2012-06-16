@@ -4,8 +4,6 @@
  */
 
 allSlides = document.querySelectorAll('section');
-//将所有的ul、ol的元素都隐藏起来
-hideAll();
 addEventListeners();   
 currentSlide = 0;
 goSlide(0);
@@ -26,7 +24,7 @@ function onKeyDown(event) {
 
 function onMouseDown(event) {
     switch(event.which) {
-    case 1: nextSlide();break;
+    case 1: nextSlide();break; 
     }
 }
 
@@ -47,7 +45,7 @@ function previousSlide() {
 
     var allLists = allSlides[currentSlide].querySelectorAll('li');
     for (var i = allLists.length - 1; i >= 0; i--) {
-	if (allLists[i].style.display == "block") {
+	if (allLists[i].style.display == "list-item") {
 	    allLists[i].style.display = "none";
 	    return;
 	}
@@ -73,7 +71,7 @@ function nextSlide() {
     var allLists = allSlides[currentSlide].querySelectorAll('li');
     for (var i = 0; i < allLists.length; i++) {
 	if (allLists[i].style.display == "none") {
-	    allLists[i].style.display = "block";
+	    allLists[i].style.display = "list-item";
 	    return;
 	}
     }
