@@ -27,6 +27,7 @@ A powerful WYSIWG slideshow editor
  
 1. config your slideshow in '_config.yaml'
 
+<pre>
 	filename: weakpoint.md
 	theme: clean
 	google-font:
@@ -37,9 +38,11 @@ A powerful WYSIWG slideshow editor
 	  subtitle: Weak is more powerful
 	  author: onesuper
 	  email: onesuperclark
+</pre>
 
 2. write your own Mardown file 
 
+<pre>
     ## It is a headline
 	* first
 	* second
@@ -51,7 +54,8 @@ A powerful WYSIWG slideshow editor
 	
 	Isn't it?
 	----
-	
+</pre>
+
 3. deploy it by typing 'python weakpoint.py'
 
 ## Libraries
