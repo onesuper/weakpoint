@@ -1,59 +1,65 @@
-<!doctype html>
-<html>
+
+<!doctype html>  
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>WeakPoint by onesuper</title>
+    <title>WeakPoint</title>
+    <link rel="stylesheet" href="core/weakpoint.css">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="theme/clean.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>WeakPoint</h1>
-        <p>Create slideshow by Markdown, Display it in web browser</p>
-        <p class="view"><a href="https://github.com/onesuper/weakpoint">View the Project on GitHub <small>onesuper/weakpoint</small></a></p>
-        <ul>
-          <li><a href="https://github.com/onesuper/weakpoint/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/onesuper/weakpoint/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/onesuper/weakpoint">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>WeakPoint [DEMO]: Create Slideshows in a Weaker Way</h1>
+    <div class="container">
+    <section>
+    
+	<div class="title">WeakPoint</div>
+	<div class="subtitle">Weak is more powerful</div>
+    <div class="meta">
+	<div class="author">onesuper</div>
+    <div class="date">2012-06-17</div>
+	<div class="email">onesuperclark@gmail.com</div>
+     <div class="theme">Powered by clean theme</div></div>
+    </section>
 
-<p>touch the <a href="">demo</a></p>
+    <section><h1>Intro</h1>
 
+    </section>
+    <section>
 <h2>It is Not</h2>
+<p>A powerful <strong>WYSIWG</strong> slideshow editor</p>
+<p><img alt="" src="img/versus.jpg" /></p>
 
-<p>A powerful WYSIWG slideshow editor  </p>
-
+    </section>
+    <section>
 <h2>Features</h2>
-
 <ul>
-<li>Create a slideshow in Markdown</li>
+<li>Create a slideshow in <strong>Markdown</strong></li>
 <li>Display it in web browser</li>
-<li>Themed by CSS</li>
+<li>Themed by <strong>CSS</strong></li>
 <li>Hosted on Github Pages</li>
-</ul><h2>Advantages</h2>
+</ul>
 
+    </section>
+    <section>
+<h2>Advantages</h2>
 <ul>
-<li>Markdown is Awesome, so it's awesome, too</li>
-<li>As compatible as web page</li>
-<li>The content and view are sperated! If you can write, then you can make slideshow</li>
-<li>A new way to share slideshows, like websites</li>
-</ul><h2>3 Setups and You Have a Slideshow</h2>
+<li>Markdown is <strong>awesome</strong>, so it is awesome, too.</li>
+<li>As <strong>compatible</strong> as a web page.</li>
+<li>The content and view are <strong>sperated</strong>! </li>
+<li>If you can <strong>write</strong>, then you can make slideshow.</li>
+<li>A new way to <strong>share</strong> slideshows, like web pages.</li>
+</ul>
 
-<ol>
-<li>
-<p>config your slideshow in '_config.yaml'</p>
+    </section>
+    <section>
+<h1>Use</h1>
 
-<p>filename: weakpoint.md
+    </section>
+    <section>
+<h2>Config your slideshow in '_config.yaml'</h2>
+<pre><code>filename: weakpoint.md
 theme: clean
 google-font:
    font1: Eater
@@ -62,39 +68,56 @@ meta:
   title: WeakPoint
   subtitle: Weak is more powerful
   author: onesuper
-  email: onesuperclark</p>
-</li>
-<li>
-<p>write your own Mardown file </p>
+  email: onesuperclark
+</code></pre>
 
-<h2>It is a headline</h2>
+    </section>
+    <section>
+<h2>Write your own Mardown file</h2>
+<pre><code>## It is a headline
+* first
+* second
+* third
+----
+## Yet another headline
+It is a lovely day.
 
-<ul>
-<li>first</li>
-<li>second</li>
-</ul>
-<h2>* third</h2>
+Isn't it?
+----
+</code></pre>
+<p>The '----' splits two slides...</p>
 
-<h2>Yet another headline</h2>
+    </section>
+    <section>
+<h2>Deploy it by typing 'python bootstrap.py'</h2>
+<p>Bootstrap your slideshow in command-line</p>
+<p><img alt="" src="img/cmd.png" /></p>
 
-<p>It is a lovely day.</p>
+    </section>
+    <section>
+<h1>Others</h1>
 
-<h2>Isn't it?</h2>
-</li>
-<li><p>deploy it by typing 'python weakpoint.py'</p></li>
-</ol><h2>Libraries</h2>
-
+    </section>
+    <section>
+<h2>Libraries</h2>
 <ol>
 <li><a href="http://pyyaml.org/">PyYAML</a></li>
 <li><a href="http://freewisdom.org/projects/python-markdown/">Markdown in Python</a></li>
 </ol>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/onesuper">onesuper</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
+    </section>
+    <section>
+<h2>Going to Be?</h2>
+<ul>
+<li>slideshow hosting and sharing?</li>
+<li>next Wordpress?</li>
+</ul>
+
+    </section>
+    <section>
+<h1>Thanks</h1>
+    </section>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="core/weakpoint.js"></script>
   </body>
 </html>

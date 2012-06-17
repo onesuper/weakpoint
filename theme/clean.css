@@ -1,0 +1,77 @@
+body {
+    font-family: Arial;
+    font-size: 28px;
+    color: #444;
+    text-shadow: rgba(0, 0, 0, 0.246094) 0 1px 1px;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+
+p {
+    width: 70%;
+}
+
+img {
+    float:right;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+    
+}
+
+.subtitle {
+    font-size: 30px;
+    font-family: 'Eater', cursive;
+    //color: #999;
+    color: #4183C4;
+    line-height: 60px;
+    padding-bottom: 40px;
+}
+
+.author {
+    line-height: 40px;
+    
+}
+
+.date {
+    
+}
+
+.email {
+    
+}
+
+.theme {
+    text-decoration: center;
+    padding-top: 100px;
+    //padding-left: 20px;
+    color: #AAA;
+    text-align: center;
+}
+
+.meta {
+    padding: 20px;
+}
+
+pre {
+    color: #4183C4;
+}
+
+a {
+    color: #4183C4;
+}
+
+strong {
+    color: #4183C4;
+}

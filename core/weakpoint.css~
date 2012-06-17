@@ -1,0 +1,15 @@
+body {
+}
+
+
+
+section {
+    display: none;
+}
+
+.container {
+    margin: 5em auto;
+    width: 78%;
+}
+
+
