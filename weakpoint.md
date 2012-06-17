@@ -1,45 +1,102 @@
-# headline1
+# Intro
 
 -------------
 
-## headline2
+## It is Not
 
-* one
-* two
-* three
-
+A powerful **WYSIWG** slideshow editor
 
 ![](img/versus.jpg)
 
 ----------------------
-## headline2
+## Features
 
-1. first
-2. second
-3. third
+* Create a slideshow in **Markdown**
+* Display it in web browser
+* Themed by **CSS**
+* Hosted on Github Pages
 
 -------------------------
 
-# headline1
+## Advantages
+
+* Markdown is **awesome**, so it is awesome, too.
+* As **compatible** as a web page.
+* The content and view are **sperated**! 
+* If you can **write**, then you can make slideshow.
+* A new way to **share** slideshows, like web pages.
 
 --------------------------
 
-## headline2
+# Use
 
 
-it is a paragraph.
+-----------------------
+
+## Config your slideshow in '_config.yaml'
 
 
-it is another paragraph.
+	filename: weakpoint.md
+	theme: clean
+	google-font:
+	   font1: Eater
+	   font2:
+	meta:
+	  title: WeakPoint
+	  subtitle: Weak is more powerful
+	  author: onesuper
+	  email: onesuperclark
+
+----------------------
+
+## Write your own Mardown file 
+
+
+	## It is a headline
+	* first
+	* second
+	* third
+	----
+	## Yet another headline
+	It is a lovely day.
+	
+	
+	Isn't it?
+	----
+
+
+The '----' splits two slides...
+
+-----------------------
+
+## Deploy it by typing 'python bootstrap.py'
+
+Bootstrap your slideshow in command-line
+
+![](img/cmd.png)
+
 
 ---------------------
 
-## headline2
+# Others
 
-It is a paragraph
 
-> it is a blockquote.
+
+--------------------
+
+## Libraries
+
+1. [PyYAML](http://pyyaml.org/)
+2. [Markdown in Python](http://freewisdom.org/projects/python-markdown/)
+
+--------------------
+
+
+## Going to Be?
+
+* slideshow hosting and sharing?
+* next Wordpress?
 
 ------------------------
 
-# headline1
+# Thanks

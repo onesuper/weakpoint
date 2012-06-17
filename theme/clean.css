@@ -2,6 +2,7 @@ body {
     font-family: Arial;
     font-size: 28px;
     color: #444;
+    text-shadow: rgba(0, 0, 0, 0.246094) 0 1px 1px;
 }
 
 h1 {
@@ -20,8 +21,6 @@ p {
 
 img {
     float:right;
-    padding-top: 2em;
-    padding-right: 1em;
 }
 
 .title {
@@ -32,14 +31,47 @@ img {
 }
 
 .subtitle {
-    font-size: 34px;
-    font-family: monospace;
-    color: #999;
-    font-style: italic;
+    font-size: 30px;
+    font-family: 'Eater', cursive;
+    //color: #999;
+    color: #4183C4;
     line-height: 60px;
     padding-bottom: 40px;
 }
 
 .author {
     line-height: 40px;
+    
+}
+
+.date {
+    
+}
+
+.email {
+    
+}
+
+.theme {
+    text-decoration: center;
+    padding-top: 100px;
+    //padding-left: 20px;
+    color: #AAA;
+    text-align: center;
+}
+
+.meta {
+    padding: 20px;
+}
+
+pre {
+    color: #4183C4;
+}
+
+a {
+    color: #4183C4;
+}
+
+strong {
+    color: #4183C4;
 }

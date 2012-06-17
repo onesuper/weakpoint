@@ -1,7 +1,10 @@
 filename: weakpoint.md
-theme: clean.css
+theme: clean
+google-font: 
+  font1: Eater
+  font2:
 meta:
-  title: WeakPoint1.0
+  title: WeakPoint
   subtitle: Weak is more powerful
   author: onesuper
-  email: onesuperclark
+  email: onesuperclark@gmail.com

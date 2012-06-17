@@ -10,10 +10,10 @@ title = config['meta']['title']
 subtitle = config['meta']['subtitle']
 author = config['meta']['author']
 email = config['meta']['email']
+font_1 = config['google-font']['font1']
+font_2 = config['google-font']['font2']
 
-
-
-
+import time
 
 fslide = open('index.html', 'w')
 content = '''
@@ -26,34 +26,60 @@ content += title
 
 content += '''</title>
     <link rel="stylesheet" href="core/weakpoint.css">
+'''
+
+if font_1:
+    content += '''
+    <link href='http://fonts.googleapis.com/css?family='''
+    content += font_1
+    content += '''' rel='stylesheet' type='text/css'>
+'''
+
+if font_2:
+    content += '''
+    <link href='http://fonts.googleapis.com/css?family='''
+    content += font_2
+    content += '''' rel='stylesheet' type='text/css'>
+'''
+
+content +='''    
     <link rel="stylesheet" href="theme/'''
 
 content += theme
 
-content += '''">
+content += '''.css">
   </head>
   <body>
     <div class="container">
     <section>
+    
 	<div class="title">''' 
 
 content += title
 
 content += '''</div>
 	<div class="subtitle">'''
-
 content += subtitle
 
 content += '''</div>
+    <div class="meta">
 	<div class="author">''' 
-
 content += author
+
+content += '''</div>
+    <div class="date">'''
+content += time.strftime("%Y-%m-%d", time.localtime())
 
 content += '''</div>
 	<div class="email">'''
 content += email
 
 content += '''</div>
+     <div class="theme">Powered by '''
+content += theme
+
+
+content += ''' theme</div></div>
     </section>
 '''
 
