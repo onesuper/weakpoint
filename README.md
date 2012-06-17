@@ -28,32 +28,32 @@ A powerful WYSIWG slideshow editor
 1. config your slideshow in '_config.yaml'
 
 <pre>
-	filename: weakpoint.md
-	theme: clean
-	google-font:
-	   font1: Eater
-	   font2:
-	meta:
-	  title: WeakPoint
-	  subtitle: Weak is more powerful
-	  author: onesuper
-	  email: onesuperclark
+filename: weakpoint.md
+theme: clean
+google-font:
+   font1: Eater
+   font2:
+meta:
+  title: WeakPoint
+  subtitle: Weak is more powerful
+  author: onesuper
+  email: onesuperclark
 </pre>
 
 2. write your own Mardown file 
 
 <pre>
-    ## It is a headline
-	* first
-	* second
-	* third
-	----
-	## Yet another headline
-	It is a lovely day.
-	
-	
-	Isn't it?
-	----
+## It is a headline
+* first
+* second
+* third
+----
+## Yet another headline
+It is a lovely day.
+
+
+Isn't it?
+----
 </pre>
 
 3. deploy it by typing 'python weakpoint.py'
