@@ -1,6 +1,6 @@
 # WeakPoint [DEMO]: Create Slideshows in a Weaker Way
 
-touch the [demo]()
+touch the [demo](http://blog.chengyichao.info/weakpoint/)
 
 ## It is Not
 
@@ -23,9 +23,9 @@ A powerful WYSIWG slideshow editor
 * The content and view are sperated! If you can write, then you can make slideshow
 * A new way to share slideshows, like websites
 
-## 3 Setups and You Have a Slideshow
+## Three Setups and You Have a Slideshow
  
-1. config your slideshow in '_config.yaml'
+###  1.Config your slideshow in '_config.yaml'
 
 <pre>
 filename: weakpoint.md
@@ -40,7 +40,7 @@ meta:
   email: onesuperclark
 </pre>
 
-2. write your own Mardown file 
+### 2. write your own Mardown file 
 
 <pre>
 ## It is a headline
@@ -56,7 +56,11 @@ Isn't it?
 ----
 </pre>
 
-3. deploy it by typing 'python weakpoint.py'
+### 3. deploy it by typing 'python bootstrap.py'
+
+<pre>
+> python bootstrap.py
+</pre>
 
 ## Libraries
 
