@@ -5,7 +5,12 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
 }
 
 
@@ -17,4 +22,24 @@ img {
     float:right;
     padding-top: 2em;
     padding-right: 1em;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+    
+}
+
+.subtitle {
+    font-size: 34px;
+    font-family: monospace;
+    color: #999;
+    font-style: italic;
+    line-height: 60px;
+    padding-bottom: 40px;
+}
+
+.author {
+    line-height: 40px;
 }
