@@ -16,11 +16,17 @@ h2 {
 
 
 p {
-    width: 70%;
+    
+}
+
+li img {
+    bottom: 10%;
+    right: 10%;
+    position: absolute;
 }
 
 img {
-    float:right;
+    
 }
 
 .title {
@@ -44,24 +50,25 @@ img {
     
 }
 
-.date {
-    
-}
-
-.email {
-    
-}
 
 .theme {
-    text-decoration: center;
-    padding-top: 100px;
-    //padding-left: 20px;
+    float: right;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
     color: #AAA;
     text-align: center;
 }
 
 .meta {
     padding: 20px;
+}
+
+.thanks {
+    color: #900000;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
 }
 
 pre {
@@ -73,5 +80,23 @@ a {
 }
 
 strong {
-    color: #4183C4;
+    color: #900000;
+}
+
+.navi {
+    text-align:center;
+}
+
+.navi span{
+    margin-left: 10px;
+    padding: 2px 6px 2px 6px;
+    color: #333;
+    //background: #222;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.navi .current {
+    color: #fff;
+    background: #222;
 }

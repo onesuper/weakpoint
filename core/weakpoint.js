@@ -4,9 +4,11 @@
  */
 
 allSlides = document.querySelectorAll('section');
+navi = document.getElementsByClassName('navi')[0]
 addEventListeners();   
 currentSlide = 0;
-goSlide(0);
+currentChapter = -1;
+goToFirst();
 
 
 function addEventListeners() {
@@ -18,7 +20,7 @@ function onKeyDown(event) {
     switch(event.keyCode) {
     case 33: case 37: previousSlide();break;
     case 34: case 39: nextSlide();break;    
-    case 36: goSlide(0);break;
+    case 36: goToFirst();break;
     }
 }
 
@@ -40,8 +42,16 @@ function hideAll() {
 }
 
 function previousSlide() {
+    // start
     if (currentSlide ==0)
 	return
+
+    //set current chapter
+    var h1_list = allSlides[currentSlide].querySelectorAll('h1');
+    if (h1_list[0]){	
+	currentChapter -= 1;
+	//alert(currentChapter);
+    }
 
     var allLists = allSlides[currentSlide].querySelectorAll('li');
     for (var i = allLists.length - 1; i >= 0; i--) {
@@ -60,13 +70,24 @@ function previousSlide() {
     }
 
     allSlides[currentSlide].style.display = "none";
+    allSlides[currentSlide].className ="noncurrent";
     allSlides[currentSlide-1].style.display = "block";
+    allSlides[currentSlide-1].className = "current";
     currentSlide -= 1;
+    processNavi();
 }
 
 function nextSlide() {
+    // end
     if (currentSlide == allSlides.length - 1)
 	return
+
+    //set current chapter
+    var h1_list = allSlides[currentSlide].querySelectorAll('h1');
+    if (h1_list[0]) {
+	currentChapter += 1;
+	//alert(currentChapter);
+    }
 
     var allLists = allSlides[currentSlide].querySelectorAll('li');
     for (var i = 0; i < allLists.length; i++) {
@@ -85,14 +106,40 @@ function nextSlide() {
     }
 
     allSlides[currentSlide].style.display = "none";
+    allSlides[currentSlide].className = "noncurrent";
     allSlides[currentSlide+1].style.display = "block";
+    allSlides[currentSlide+1].className = "current";
     currentSlide += 1;
+    processNavi();
+
+
 }
 
-function goSlide(i) {
+function goToFirst() {
     allSlides[currentSlide].style.display = "none";
-    allSlides[i].style.display = "block";
-    currentSlide = i;
+    allSlides[currentSlide].className = "noncurrent";
+    allSlides[0].style.display = "block";
+    allSlides[0].className = "current";
+    currentSlide = 0;
+    currentChapter = -1;
     hideAll();
+    processNavi();
 }
+
+function processNavi() {
     
+    var h1_list = allSlides[currentSlide].querySelectorAll('h1');
+
+    // 第一页、最后一页、包含h1的页面不显示导航
+    if (h1_list[0] || currentSlide==0 || currentSlide == allSlides.length - 1) {
+	navi.style.display = "none";
+    } else {
+	navi.style.display = "block";
+	// 显示当前导航
+	var naviItemList = navi.querySelectorAll('span');
+	for(var i=0; i<naviItemList.length; i++) {
+	    naviItemList[i].className = null;
+	    naviItemList[currentChapter].className = "current";
+	}
+    }
+}
