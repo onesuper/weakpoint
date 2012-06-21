@@ -6,7 +6,7 @@
 
 A powerful **WYSIWG** slideshow editor
 
-![](img/versus.jpg)
+![](img/WYSIWG.gif)
 
 ----------------------
 ## Features
@@ -14,21 +14,21 @@ A powerful **WYSIWG** slideshow editor
 * Create a slideshow in **Markdown**
 * Display it in web browser
 * Themed by **CSS**
-* Hosted on Github Pages
+* Hosted on Github Pages ![](img/cat.png)
 
 -------------------------
 
 ## Advantages
 
-* Markdown is **awesome**, so it is awesome, too.
-* As **compatible** as a web page.
+* Markdown is **awesome**, so it is awesome, too. ![](img/awsome.jpg)
+* As **compatible** as a web page. ![](img/browser.jpg)
 * The content and view are **sperated**! 
 * If you can **write**, then you can make slideshow.
 * A new way to **share** slideshows, like web pages.
 
 --------------------------
 
-# Use
+# Usage
 
 
 -----------------------
@@ -45,7 +45,8 @@ A powerful **WYSIWG** slideshow editor
 	  title: WeakPoint
 	  subtitle: Weak is more powerful
 	  author: onesuper
-	  email: onesuperclark
+	  email: onesuperclark@gmail.com
+	...
 
 ----------------------
 
@@ -65,13 +66,12 @@ A powerful **WYSIWG** slideshow editor
 	----
 
 
-The '----' splits two slides...
+The ** '----'** splits two slides...
 
 -----------------------
 
 ## Deploy it by typing 'python bootstrap.py'
 
-Bootstrap your slideshow in command-line
 
 ![](img/cmd.png)
 
@@ -92,11 +92,10 @@ Bootstrap your slideshow in command-line
 --------------------
 
 
-## Going to Be?
+## Likely to Be?
 
 * slideshow hosting and sharing?
-* next Wordpress?
+* another WP? ![](img/wp.jpg)
 
-------------------------
 
-# Thanks
+

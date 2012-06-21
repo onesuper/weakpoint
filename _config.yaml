@@ -8,3 +8,7 @@ meta:
   subtitle: Weak is more powerful
   author: onesuper
   email: onesuperclark@gmail.com
+  organization: Central Park
+slide:
+  navi: true
+  ribbon: true
