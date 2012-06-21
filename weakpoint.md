@@ -22,7 +22,7 @@ A powerful **WYSIWG** slideshow editor
 
 * Markdown is **awesome**, so it is awesome, too. ![](img/awsome.jpg)
 * As **compatible** as a web page. ![](img/browser.jpg)
-* The content and view are **sperated**! 
+* The content and view are **separated**! 
 * If you can **write**, then you can make slideshow.
 * A new way to **share** slideshows, like web pages.
 
