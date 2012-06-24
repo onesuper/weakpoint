@@ -4,6 +4,7 @@ import yaml
 import markdown
 import re
 import time
+import codecs
 
 # import the configs
 f = open('_config.yaml')
@@ -16,18 +17,17 @@ subtitle = config['meta']['subtitle']
 author = config['meta']['author']
 email = config['meta']['email']
 organization = config['meta']['organization']
-font_1 = config['google-font']['font1']
-font_2 = config['google-font']['font2']
+googlefonts = config['googlefonts']
 navi_enable = config['slide']['navi']
 ribbon_enable = config['slide']['ribbon']
 
 # read the markdown file and convert it to html
-fmd = open(filename)
+fmd = codecs.open(filename, mode="r", encoding="utf8")
 text = fmd.read()
 html = markdown.markdown(text)
 
 
-fslide = open('index.html', 'w')
+
 content = '''
 <!doctype html>  
 <html lang="en">
@@ -41,19 +41,13 @@ content += '''</title>
 '''
 # set up fonts
 
-if font_1:
+if googlefonts:
     content += '''
     <link href='http://fonts.googleapis.com/css?family='''
-    content += font_1
+    content += googlefonts
     content += '''' rel='stylesheet' type='text/css'>
 '''
 
-if font_2:
-    content += '''
-    <link href='http://fonts.googleapis.com/css?family='''
-    content += font_2
-    content += '''' rel='stylesheet' type='text/css'>
-'''
 
 # set up theme
 
@@ -127,8 +121,13 @@ content += ''' theme</div></div>
 
 # Markdown Starts
 
+# a little trick here
+
+html = html.replace('<h2>', '<hr />\n<h2>')
+html = html.replace('<h1>', '<hr />\n<h1>')
 p = re.compile(r'<hr />')
 slides = p.split(html)
+slides.remove('')
 for one in slides:
     content += '''
     <section>'''
@@ -144,7 +143,9 @@ content += '''
       <div class="thanks">Thanks!</div>
     </section>
     </div>
-    <script src="core/weakpoint.js"></script>'''
+    <script src="core/weakpoint.js"></script>
+    <script>weakpoint.init()</script>
+    '''
 
 if ribbon_enable:
     content += '''
@@ -154,5 +155,7 @@ if ribbon_enable:
     </body>
 </html>'''
 
+
+fslide = codecs.open('index.html', mode="w", encoding="utf8")
 fslide.write(content)
 fslide.close()

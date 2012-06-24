@@ -1,4 +1,6 @@
-# WeakPoint [DEMO]: Create Slideshows in a Weaker Way
+# WeakPoint: Create Slideshows in a Weaker Way
+
+version 0.1
 
 touch the [demo](http://blog.chengyichao.info/weakpoint/)
 
@@ -20,7 +22,8 @@ A powerful WYSIWG slideshow editor
 
 * Markdown is Awesome, so it's awesome, too
 * As compatible as web page
-* The content and view are sperated! If you can write, then you can make slideshow
+* The content and view are sperated!
+* If you can write, then you can make slideshow
 * A new way to share slideshows, like websites
 
 ## Three Setups and You Have a Slideshow
@@ -30,14 +33,13 @@ A powerful WYSIWG slideshow editor
 <pre>
 filename: weakpoint.md
 theme: clean
-google-font:
-   font1: Eater
-   font2:
+googlefonts:Eater|Smart
 meta:
   title: WeakPoint
   subtitle: Weak is more powerful
   author: onesuper
   email: onesuperclark
+  ...
 </pre>
 
 ### 2. write your own Mardown file 

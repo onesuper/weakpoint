@@ -21,12 +21,11 @@
 	<div class="author">onesuper</div>
 	<div class="email">onesuperclark@gmail.com</div>
     <div class="organization">Central Park</div>
-    <div class="date">2012-06-24</div>
+    <div class="date">2012-06-21</div>
      <div class="theme">clean theme</div></div>
     </section>
 
-    <section>
-<h1>Intro</h1>
+    <section><h1>Intro</h1>
 
     </section>
     <section>
@@ -78,19 +77,18 @@ meta:
     </section>
     <section>
 <h2>Write your own Mardown file</h2>
-<pre><code># Chapter 1
-
-## It is a headline
+<pre><code>## It is a headline
 * first
 * second
 * third
-
+----
 ## Yet another headline
 It is a lovely day.
 
 Isn't it?
-...
+----
 </code></pre>
+<p>The <strong> '----'</strong> splits two slides...</p>
 
     </section>
     <section>
@@ -111,16 +109,19 @@ Isn't it?
 
     </section>
     <section>
-<h2>More Reading</h2>
-<p><a href="http://blog.chengyichao.info/2012/06/17/slideshow-in-markdown/">用Markdown写幻灯片，用浏览器展示</a></p>
+<h2>Likely to Be?</h2>
+<ul>
+<li>slideshow hosting and sharing?</li>
+<li>another WP? <img alt="" src="img/wp.jpg" /></li>
+</ul>
     </section>
     <section>
       <div class="thanks">Thanks!</div>
     </section>
     </div>
     <script src="core/weakpoint.js"></script>
-    <script>weakpoint.init()</script>
-    
+    <script src="lib/impress.js"></script>
+    <script>weakpoint.init();impress().init();</script>
     <a href="https://github.com/onesuper/weakpoint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     </body>
 </html>

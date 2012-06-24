@@ -1,8 +1,6 @@
 filename: weakpoint.md
 theme: clean
-google-font: 
-  font1: Eater
-  font2:
+googlefonts: Eater
 meta:
   title: WeakPoint
   subtitle: Weak is more powerful

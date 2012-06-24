@@ -1,22 +1,17 @@
 # Intro
 
--------------
-
 ## It is Not
 
 A powerful **WYSIWG** slideshow editor
 
 ![](img/WYSIWG.gif)
 
-----------------------
 ## Features
 
 * Create a slideshow in **Markdown**
 * Display it in web browser
 * Themed by **CSS**
 * Hosted on Github Pages ![](img/cat.png)
-
--------------------------
 
 ## Advantages
 
@@ -26,15 +21,10 @@ A powerful **WYSIWG** slideshow editor
 * If you can **write**, then you can make slideshow.
 * A new way to **share** slideshows, like web pages.
 
---------------------------
+
 
 # Usage
-
-
------------------------
-
 ## Config your slideshow in '_config.yaml'
-
 
 	filename: weakpoint.md
 	theme: clean
@@ -48,27 +38,23 @@ A powerful **WYSIWG** slideshow editor
 	  email: onesuperclark@gmail.com
 	...
 
-----------------------
 
 ## Write your own Mardown file 
 
-
+	# Chapter 1
+	
 	## It is a headline
 	* first
 	* second
 	* third
-	----
+	
 	## Yet another headline
 	It is a lovely day.
 	
 	
 	Isn't it?
-	----
+	...
 
-
-The ** '----'** splits two slides...
-
------------------------
 
 ## Deploy it by typing 'python bootstrap.py'
 
@@ -76,26 +62,20 @@ The ** '----'** splits two slides...
 ![](img/cmd.png)
 
 
----------------------
-
 # Others
 
-
-
---------------------
 
 ## Libraries
 
 1. [PyYAML](http://pyyaml.org/)
 2. [Markdown in Python](http://freewisdom.org/projects/python-markdown/)
 
---------------------
 
 
-## Likely to Be?
 
-* slideshow hosting and sharing?
-* another WP? ![](img/wp.jpg)
+## More Reading
+
+[用Markdown写幻灯片，用浏览器展示](http://blog.chengyichao.info/2012/06/17/slideshow-in-markdown/)
 
 
 
