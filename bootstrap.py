@@ -5,6 +5,8 @@ import markdown
 import re
 import time
 
+
+
 # import the configs
 f = open('_config.yaml')
 config = yaml.load(f)
@@ -20,6 +22,13 @@ font_1 = config['google-font']['font1']
 font_2 = config['google-font']['font2']
 navi_enable = config['slide']['navi']
 ribbon_enable = config['slide']['ribbon']
+latex_enable = config['slide']['latex']
+
+# if latex is enabled
+if latex_enable:
+    import parseTex
+    parseTex.parse(filename)
+    filename = parseTex.PARSED_PREFIX + filename
 
 # read the markdown file and convert it to html
 fmd = open(filename)

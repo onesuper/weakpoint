@@ -1,14 +1,15 @@
-filename: weakpoint.md
+filename: texDemo.md
 theme: clean
 google-font: 
   font1: Eater
   font2:
 meta:
-  title: WeakPoint
-  subtitle: Weak is more powerful
-  author: onesuper
-  email: onesuperclark@gmail.com
-  organization: Central Park
+  title: Latex Demo
+  subtitle: for simple math
+  author: doubletony
+  email: doubletony@gmail.com
+  organization: Pure Michigan
 slide:
   navi: true
   ribbon: true
+  latex: true
