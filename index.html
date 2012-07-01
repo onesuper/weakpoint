@@ -4,6 +4,36 @@
   <head>
     <meta charset="utf-8">
     <title>WeakPoint</title>
+     <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+      }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+		   all[i].SourceElement().parentNode.className += ' has-jax';
+		   }
+		   });
+	</script>
+    
+    <script type="text/javascript"
+	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
     <link rel="stylesheet" href="core/weakpoint.css">
 
     <link href='http://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
@@ -11,7 +41,7 @@
     <link rel="stylesheet" href="theme/clean.css">
   </head>
   <body>
-    <div class="navi"><span>Intro</span><span>Usage</span><span>Others</span>
+    <div class="navi"><span>Intro</span><span>Usage</span><span>Misc</span><span>Others</span>
     </div>
     <div class="container">
     <section>
@@ -21,7 +51,7 @@
 	<div class="author">onesuper</div>
 	<div class="email">onesuperclark@gmail.com</div>
     <div class="organization">Central Park</div>
-    <div class="date">2012-06-24</div>
+    <div class="date">2012-07-01</div>
      <div class="theme">clean theme</div></div>
     </section>
 
@@ -61,12 +91,10 @@
 
     </section>
     <section>
-<h2>Config your slideshow in '_config.yaml'</h2>
+<h2>Config your slideshow in 'config.yaml'</h2>
 <pre><code>filename: weakpoint.md
 theme: clean
-google-font:
-   font1: Eater
-   font2:
+googlefonts: Eater
 meta:
   title: WeakPoint
   subtitle: Weak is more powerful
@@ -96,6 +124,18 @@ Isn't it?
     <section>
 <h2>Deploy it by typing 'python bootstrap.py'</h2>
 <p><img alt="" src="img/cmd.png" /></p>
+
+    </section>
+    <section>
+<h1>Misc</h1>
+
+    </section>
+    <section>
+<h2>LaTeX</h2>
+<p>This is inline: $ e^{ix} = \cos x + i\;\sin x $</p>
+<p>$$
+P_k= \frac{np(np-p)\dots(np-kp+p)}{k!}      \frac  {  {(1-p)^{-\frac{1}{p}} }^{-np}}   {(1-p)^{k}}
+$$</p>
 
     </section>
     <section>
