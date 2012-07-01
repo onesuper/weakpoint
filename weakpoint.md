@@ -24,13 +24,11 @@ A powerful **WYSIWG** slideshow editor
 
 
 # Usage
-## Config your slideshow in '_config.yaml'
+## Config your slideshow in 'config.yaml'
 
 	filename: weakpoint.md
 	theme: clean
-	google-font:
-	   font1: Eater
-	   font2:
+	googlefonts: Eater
 	meta:
 	  title: WeakPoint
 	  subtitle: Weak is more powerful
@@ -60,6 +58,17 @@ A powerful **WYSIWG** slideshow editor
 
 
 ![](img/cmd.png)
+
+
+# Misc
+
+## LaTeX
+
+This is inline: $ e^{ix} = \cos x + i\;\sin x $
+
+$$
+P_k= \frac{np(np-p)\dots(np-kp+p)}{k!}      \frac  {  {(1-p)^{-\frac{1}{p}} }^{-np}}   {(1-p)^{k}}
+$$
 
 
 # Others

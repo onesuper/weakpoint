@@ -1,8 +1,15 @@
 # WeakPoint: Create Slideshows in a Weaker Way
 
-version 0.1
-
 touch the [demo](http://blog.chengyichao.info/weakpoint/)
+
+------------
+version 0.11
+
+Support LaTeX 
+
+---------------
+
+version 0.1
 
 ## It is Not
 
