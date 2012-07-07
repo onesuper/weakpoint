@@ -1,4 +1,5 @@
-# create a slide show quickly
+# author: onesuper
+# under MIT license
 
 import yaml
 import markdown
@@ -6,7 +7,7 @@ import re
 import time
 import codecs
 
-# import the configs
+# ===========import the configs========
 f = open('config.yaml')
 config = yaml.load(f)
 f.close()
@@ -20,14 +21,16 @@ organization = config['meta']['organization']
 googlefonts = config['googlefonts']
 navi_enable = config['slide']['navi']
 ribbon_enable = config['slide']['ribbon']
+latex_enable = config['slide']['latex']
+mode = config['slide']['mode']
 
-# read the markdown file and convert it to html
+# =======read the markdown file and convert it to html ========
 fmd = codecs.open(filename, mode="r", encoding="utf8")
 text = fmd.read()
 html = markdown.markdown(text)
 
 
-
+# ==================html starts===============
 content = '''
 <!doctype html>  
 <html lang="en">
@@ -35,64 +38,51 @@ content = '''
     <meta charset="utf-8">
     <title>''' 
 content += title
-
 content += '''</title>
-     <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-      tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-      }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-      tex2jax: {
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-		   all[i].SourceElement().parentNode.className += ' has-jax';
-		   }
-		   });
-	</script>
-    
-    <script type="text/javascript"
-	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    
     <link rel="stylesheet" href="core/weakpoint.css">
-'''
-# set up fonts
+    <script src="third/jquery.js" type="text/javascript"></script>
+    <script src="third/jquery.bxSlider.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+  $(document).ready(function(){
+    bxslide = $('#slider1').bxSlider({
+        infiniteLoop: false,
+        controls: false,
+        mode : "'''
+# -------------------------mode-------------------
+content += mode + '",'
+content += '''
+        });
+});
+    </script>'''
 
+# ====================latex======================
+if latex_enable:
+    content += '''
+     <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ],processEscapes: true}});</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']}});</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {var all = MathJax.Hub.getAllJax(), i;for(i=0; i < all.length; i += 1) {all[i].SourceElement().parentNode.className += ' has-jax';}});</script>
+    <script type="text/javascript"src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>'''
+# ends
+
+# ===================google fonts==================
 if googlefonts:
     content += '''
     <link href='http://fonts.googleapis.com/css?family='''
     content += googlefonts
-    content += '''' rel='stylesheet' type='text/css'>
-'''
+    content += '''' rel='stylesheet' type='text/css'>'''
 
 
-# set up theme
-
-content +='''    
+# ===================theme=====================
+if theme:
+    content +='''    
     <link rel="stylesheet" href="theme/'''
-
-content += theme
-
-content += '''.css">
+    content += theme
+    content += '''.css">
   </head>
   <body>'''
 
 
-# navi bar
-
+# =======================navi====================
 if navi_enable:
     content += '''
     <div class="navi">'''
@@ -107,85 +97,104 @@ if navi_enable:
     </div>'''
 
 content += '''
-    <div class="container">
-    <section>
-	<div class="title">''' 
+    <div id="wrapper">
+    <div id="slider1">
+    <div class="paper"><div class="paper-container">
+	    <div class="title">''' 
 
-# set up the first slide with meta infomations
- 
+# =====================front page===========================
+
+# ------------------------------------- title-----------------------------------------
 content += title
-
 content += '''</div>
-	<div class="subtitle">'''
+	    <div class="subtitle">'''
+    
+# ------------------------------------- subtile--------------------------------------
 content += subtitle
-
 content += '''</div>
-    <div class="meta">
-	<div class="author">''' 
+        <div class="meta">
+	         <div class="author">''' 
+    
+# -------------------------------------author---------------------------------------
 content += author
 
-
+# -------------------------------------email-----------------------------------------
 if email:
     content += '''</div>
-	<div class="email">'''
+	          <div class="email">'''
     content += email
-
+    
+# -------------------------------------organization---------------------------------
 if organization:
     content += '''</div>
-    <div class="organization">'''
+              <div class="organization">'''
     content += organization
     
+# -------------------------------------time-----------------------------------------
 content += '''</div>
-    <div class="date">'''
+              <div class="date">'''
 content += time.strftime("%Y-%m-%d", time.localtime())
-
-
 content += '''</div>
-     <div class="theme">'''
+              <div class="theme">'''
+     
+# -------------------------------------theme----------------------------------------
 content += theme
-
-
 content += ''' theme</div></div>
-    </section>
-'''
+    </div></div>'''
 
-# Markdown Starts
-
-# a little trick here
-
+# ==================trick here=================
 html = html.replace('<h2>', '<hr />\n<h2>')
 html = html.replace('<h1>', '<hr />\n<h1>')
 p = re.compile(r'<hr />')
 slides = p.split(html)
 slides.remove('')
+
+# ===================slides====================
 for one in slides:
     content += '''
-    <section>'''
+
+
+
+
+
+
+    
+    
+    <div class="paper"><div class="paper-container">
+    <!-- =========================SLIDE==========================-->
+    '''
     content += one
     content += '''
-    </section>'''
+    <!-- ====================================================== -->
+    </div></div>'''
 
-# Markdown Ends
-
-
+    
+# ===================end page & js===================
 content += '''
-    <section>
-      <div class="thanks">Thanks!</div>
-    </section>
+    <div class="paper"><div class="paper-container">
+      <div class="thanks">Thanks!</div></div>
     </div>
-    <script src="core/weakpoint.js"></script>
-    <script>weakpoint.init()</script>
-    '''
+    </div>
+    </div>
+    <script type="text/javascript" src="core/weakpoint.js"></script>
+    <script type="text/javascript">var weakpoint = new weakPoint(); weakpoint.init();</script>'''
 
+    
+
+    
+# ====================ribbon====================
 if ribbon_enable:
     content += '''
-    <a href="https://github.com/onesuper/weakpoint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>'''
+    <a href="https://github.com/onesuper/weakpoint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>'''
 
-    content += '''
+    
+# ==================html ends=====================
+content += '''
     </body>
 </html>'''
 
 
+# =================write file=====================
 fslide = codecs.open('index.html', mode="w", encoding="utf8")
 fslide.write(content)
 fslide.close()

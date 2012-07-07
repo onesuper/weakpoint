@@ -3,145 +3,79 @@
  * (c) 2012 onesuper
  */
 
-var weakpoint = new weakPoint();
+
 
 function weakPoint() {
-
-    var allSlides = document.querySelectorAll('section');
-    var navi = document.getElementsByClassName('navi')[0];
+    var allSlides = $('.paper');
+    var navi = $('.navi')[0];
     var currentSlide = 0;
     var currentChapter = -1;
 
     this.init = function() {
 	addEventListeners();   
-	goToFirst();
+	currentSlide = 0;
+	currentChapter = -1;
+	processNavi();
+	
     }
 
     function addEventListeners() {
 	document.addEventListener('keydown', onKeyDown, false);
-	document.addEventListener('mousedown', onMouseDown, false);
     }
 
     function onKeyDown(event) {
 	switch(event.keyCode) {
-	case 33: case 37: previousSlide();break;
-	case 34: case 39: nextSlide();break;    
-	case 36: goToFirst();break;
+	case 33: case 37: case 80: case 75: previous(); break;
+	case 34: case 39: case 78: case 74: next(); break;    
+	case 36: reset(); break;
 	}
     }
 
-    function onMouseDown(event) {
-	switch(event.which) {
-	case 1: nextSlide();break; 
-	}
-    }
-
-    function hideAll() {
-	var allLists = document.querySelectorAll('li');
-	for (var i=0; i<allLists.length; i++) {
-	    allLists[i].style.display ="none";
-	}
-	var allP = document.querySelectorAll('p');
-	for (var i = 0; i < allP.length; i++) {
-	    allP[i].style.display = "none";
-	}
-    }
-
-    function previousSlide() {
-	// start
-	if (currentSlide ==0)
-	    return
-
-	//set current chapter
-	var h1_list = allSlides[currentSlide].querySelectorAll('h1');
-	if (h1_list[0]){	
-	    currentChapter -= 1;
-	    //alert(currentChapter);
-	}
-
-	var allLists = allSlides[currentSlide].querySelectorAll('li');
-	for (var i = allLists.length - 1; i >= 0; i--) {
-	    if (allLists[i].style.display == "list-item") {
-		allLists[i].style.display = "none";
-		return;
-	    }
-	}
-
-	var allP = allSlides[currentSlide].querySelectorAll('p');
-	for (var i = allP.length - 1; i >= 0; i--) {
-	    if (allP[i].style.display == "block") {
-		allP[i].style.display = "none";
-		return;
-	    }
-	}
-
-	allSlides[currentSlide].style.display = "none";
-	//allSlides[currentSlide].className ="noncurrent";
-	allSlides[currentSlide-1].style.display = "block";
-	//allSlides[currentSlide-1].className = "current";
-	currentSlide -= 1;
-	processNavi();
-    }
-
-    function nextSlide() {
+    function next() {
 	// end
 	if (currentSlide == allSlides.length - 1)
 	    return
 
 	//set current chapter
-	var h1_list = allSlides[currentSlide].querySelectorAll('h1');
+	var h1_list = allSlides[currentSlide+1].querySelectorAll('h1');
 	if (h1_list[0]) {
 	    currentChapter += 1;
-	    //alert(currentChapter);
 	}
-
-	var allLists = allSlides[currentSlide].querySelectorAll('li');
-	for (var i = 0; i < allLists.length; i++) {
-	    if (allLists[i].style.display == "none") {
-		allLists[i].style.display = "list-item";
-		return;
-	    }
-	}
-
-	var allP = allSlides[currentSlide].querySelectorAll('p');
-	for (var i = 0; i < allP.length; i++) {
-	    if (allP[i].style.display == "none") {
-		allP[i].style.display = "block";
-		return;
-	    }
-	}
-
-	allSlides[currentSlide].style.display = "none";
-	//allSlides[currentSlide].className = "noncurrent";
-	allSlides[currentSlide+1].style.display = "block";
-	//allSlides[currentSlide+1].className = "current";
+	
 	currentSlide += 1;
+	bxslide.goToNextSlide();
 	processNavi();
-
-
     }
 
-    function goToFirst() {
-	allSlides[currentSlide].style.display = "none";
-	//allSlides[currentSlide].className = "noncurrent";
-	allSlides[0].style.display = "block";
-	//allSlides[0].className = "current";
+    function previous() {
+	
+	if (currentSlide == 0)
+	    return
+
+	//进入新的章节
+	var h1_list = allSlides[currentSlide].querySelectorAll('h1');
+	if (h1_list[0]){	
+	    currentChapter -= 1;
+	}
+	currentSlide -= 1;
+	bxslide.goToPreviousSlide();
+	processNavi();
+    }
+
+    function reset() {
 	currentSlide = 0;
 	currentChapter = -1;
-	hideAll();
+	bxslide.goToFirstSlide();
 	processNavi();
     }
 
     function processNavi() {
-	
-	var h1_list = allSlides[currentSlide].querySelectorAll('h1');
-
-	// 第一页、最后一页、包含h1的页面不显示导航
-	if (h1_list[0] || currentSlide==0 || currentSlide == allSlides.length - 1) {
+	// 第一页、最后一页不显示导航
+	if (currentSlide==0 || currentSlide == allSlides.length - 1) {
 	    navi.style.display = "none";
 	} else {
 	    navi.style.display = "block";
-	    // 显示当前导航
+	    // 当前章节
 	    var naviItemList = navi.querySelectorAll('span');
 	    for(var i=0; i<naviItemList.length; i++) {
 		naviItemList[i].className = null;
@@ -149,5 +83,4 @@ function weakPoint() {
 	    }
 	}
     }
-
 }

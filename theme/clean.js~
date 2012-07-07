@@ -1,0 +1,13 @@
+
+
+var weakpoint = new weakPoint();
+
+var appear = function(no) {
+    all[no].style.display = "block";
+    //alert(no);
+}
+
+var disappear = function(no) {
+    all[no].style.display = "none";
+    //alert(no);
+}
