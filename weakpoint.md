@@ -18,7 +18,7 @@ A powerful **WYSIWG** slideshow editor
 
 ## Advantages
 
-* Markdown is **awesome**, so it is awesome, too.   ![](img/awsome.jpg)
+* Markdown is **awesome**, so it is awesome, too. 
 * As **compatible** as a web page.    ![](img/browser.jpg)
 * The content and view are **separated**! 
 * If you can **write**, then you can make slideshow.
@@ -39,10 +39,12 @@ A powerful **WYSIWG** slideshow editor
 	  subtitle: Weak is more powerful
 	  author: onesuper
 	  email: onesuperclark@gmail.com
-	...
+    ...
+	
+[config.yaml of this slideshow](config.yaml)
 
 
-## Write your own Mardown file 
+## Write your own Markdown file 
 
 	# Chapter 1
 	
@@ -53,8 +55,8 @@ A powerful **WYSIWG** slideshow editor
 	
 	## Yet another headline
 	It is a lovely day.
-	...
-
+	
+[markdown of this slideshow](weakpoint.md)
 
 ## Deploy it by typing 'python bootstrap.py'
 
@@ -64,11 +66,11 @@ A powerful **WYSIWG** slideshow editor
 
 # Misc
 
-## LaTeX
+## $ \LaTeX $
 
 *This is inline:* $ e^{ix} = \cos x + i\;\sin x $
 
-This one is not:
+And what's more:
 
 
 $$
@@ -90,6 +92,4 @@ $$
 ## More Reading
 
 * [用Markdown写幻灯片，用浏览器展示](http://blog.chengyichao.info/2012/06/17/slideshow-in-markdown/)
-
-
-
+* [WeakPoint v1.0](http://blog.chengyichao.info/2012/07/07/weakpoint-v1)

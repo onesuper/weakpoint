@@ -1,0 +1,21 @@
+filename: weakpoint.md
+theme: clean
+googlefonts: Eater
+
+meta:
+  title: WeakPoint
+  subtitle: Weak is more powerful
+  author: onesuper
+  organization: People Square
+
+  contact:
+    email: onesuperclark@gmail.com
+    twitter: chengyichao
+    github: onesuper
+    
+slide:
+  navi: true
+  ribbon: true
+  latex: true
+  mode: fade         # in { horizontal, vertical, fade }
+  speed: 800
