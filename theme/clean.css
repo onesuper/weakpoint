@@ -7,9 +7,11 @@ html {
 body {
 
     background: -webkit-linear-gradient(top, #222 0%,#777 50%, #777 50%, #222 100%);
-    background: background: -moz-linear-gradient(top, #222 0%, #777 50%, #777 50%, #222 100%);
+    background: -moz-linear-gradient(top, #222 0%, #777 50%, #777 50%, #222 100%);
     display: table-cell;
     vertical-align: middle;   
+    font-family: Arial ,sans-serif;
+    
 }
 
 h1 {
@@ -17,11 +19,13 @@ h1 {
     text-align: center;
     margin-top: 200px;
     color: #111;
+    font-family: 'Lato', Times, 'Times New Roman', serif;
 }
 
 h2 {
     font-size: 32px;
     color: #111;
+    font-family: 'Lato', Times, 'Times New Roman', serif;
 }
 
 
@@ -48,7 +52,7 @@ ul {
     font-size: 50px;
     font-weight: bold;
     line-height: 70px;
-    
+    font-family: 'Lato', Times, 'Times New Roman', serif;
 }
 
 .subtitle {
@@ -73,7 +77,9 @@ ul {
 }
 
 .meta {
-    padding: 20px;
+    padding: 16px;
+    border: 3px dashed #ccc;
+    width: 400px;
 }
 
 .thanks {
@@ -82,6 +88,7 @@ ul {
     font-weight: bold;
     text-align: center;
     margin-top: 208px;
+    font-family: 'Lato', Times, 'Times New Roman', serif;
 }
 
 pre {
@@ -131,7 +138,6 @@ strong {
     width: 800px;
     height: 600px;
     background: #FFFFFF;
-    font-family: Arial;
     font-size: 28px;
     color: #444;
     text-shadow: rgba(0, 0, 0, 0.246094) 0 1px 1px;
@@ -149,14 +155,52 @@ strong {
     margin: 0px auto;
 }
 
+
+.social ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type:  none;
+}
+
+.social ul li {
+    float: left;
+    margin-right: 8px;
+}
+
+
+
 .email {
-    margin: 5px 5px 5px 0px;
+    width: 34px;
+    height: 34px;
+    background: url('email.png') no-repeat;
+    text-indent: -999999px;
 }
+
+.email a{
+    display: block;
+}
+
+
 .twitter {
-    margin: 5px;
+    width: 34px;
+    height: 34px;
+    background: url('twitter.png') no-repeat;
+    text-indent: -999999px;
 }
+
+.twitter a{
+    display: block;
+}
+
 .github {
-    margin: 5px;
+    width: 34px;
+    height: 34px;
+    background: url('github.png') no-repeat;
+    text-indent: -999999px;
+}
+
+.github a{
+    display: block;
 }
 
 .bx-prev {

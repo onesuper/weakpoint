@@ -101,62 +101,70 @@ if navi_enable:
 content += '''
     <div id="wrapper">
     <div id="slider1">
-    <div class="paper">
-        <div class="paper-container">''' 
+    <div class="paper"><div class="paper-container">\n<!-- ====================front page ===============  -->\n''' 
 
-# =====================front page===========================
+# =====================front page starts===========================
 
-# ------------------------------------- title-----------------------------------------
+# title
 content += '''<div class="title">'''
 content += title
 content += '''</div>\n'''
     
-# ------------------------------------- subtile--------------------------------------
+# subtile
 content += '''<div class="subtitle">'''
 content += subtitle
 content += '''</div>\n'''
 
-# ------------------------------------------meta starts---------------------------
-content += '''<div class="meta">''' 
+# *****************meta starts **********************
+content += '''<table class="meta">\n<tbody>\n''' 
     
-# -------------------------------------author---------------------------------------
-content += '''<div class="author">'''
+# author
+content += '''<tr class="author"><td>'''
 content += author
-content += '''</div>\n'''
+content += '''</td></tr>\n'''
 
-# -------------------------------------email-----------------------------------------
+# +++++++++++++++social starts ++++++++++++++++++
+content +='''<tr class="social"><td><ul>\n'''
+
+# email
 if email:
-    content += '''<span class="email"><a href="mailto:'''
+    content += '''  <li class="email"><a href="mailto:'''
     content += email
-    content += '''">Email</a></span>'''
+    content += '''" targe="_blank">Email</a></li>\n'''
 
-#---------------------------------------twitter----------------------------------------
+#twitter
 if twitter:
-    content += '''<span class="twitter"><a href="http://twitter.com/'''
+    content += '''  <li class="twitter"><a href="http://twitter.com/''' 
     content += twitter
-    content += '''">Twitter</a></span>'''
+    content += '''" target="_blank">Twitter</a></li>\n'''
 
 if github:
-    content += '''<span class="github"><a href="http://github.com/'''
+    content += '''  <li class="github"><a href="http://github.com/'''
     content += github
-    content += '''">Github</a></span>'''
-    
-# -------------------------------------organization---------------------------------
+    content += '''" target="_blank">Github</a></li>\n'''
+# ++++++++++++++++++social ends +++++++++++++++++
+content += '''</ul></td></tr>\n'''
+# organization
 if organization:
-    content += '''<div class="organization">'''
+    content += '''<tr class="organization"><td>'''
     content += organization
-    content += '''</div>\n'''
+    content += '''</td></tr>\n'''
     
-# -------------------------------------time-----------------------------------------
-content += '''<div class="date">'''
+# time
+content += '''<tr class="date"><td>'''
 content += time.strftime("%Y-%m-%d", time.localtime())
-content += '''</div>\n'''
+content += '''</td></tr>\n'''
+
+# ********************************meta ends ************************************
+content += '''</tbody>\n</table>\n'''
      
-# -------------------------------------theme----------------------------------------
+# ======================theme========================
 content += '''<div class="theme">'''
 content += theme
-content += ''' theme</div></div>
-    </div></div>'''
+content += ''' theme</div>\n'''
+
+# ============= front page ends=====================
+content += ''' <!-- ================front page==============  -->\n</div></div>'''
 
 # ==================trick here=================
 html = html.replace('<h2>', '<hr />\n<h2>')
