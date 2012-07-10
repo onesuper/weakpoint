@@ -137,7 +137,7 @@ content += '''<div class="meta">'''
 
 if gravatar_enable and email:
     import urllib, hashlib
-    gravatar_url = "http:/en.gravatar.com/avatar/" + hashlib.md5(email.lower()).hexdigest() + "?"
+    gravatar_url = "http://en.gravatar.com/avatar/" + hashlib.md5(email.lower()).hexdigest() + "?"
     gravatar_url += urllib.urlencode({'s' : '70'})
     content += '<img style="float:left;margin:15px;" class="avatar"src="' + gravatar_url +'" alt="avatar" width="70" height="70"/>'
 
