@@ -25,7 +25,8 @@ navi_enable = config['slide']['navi']
 ribbon_enable = config['slide']['ribbon']
 latex_enable = config['slide']['latex']
 mode = config['slide']['mode']
-
+gravatar_enable = config['meta']['gravatar']
+ga = config['google-analytics']
 # =======read the markdown file and convert it to html ========
 fmd = codecs.open(filename, mode="r", encoding="utf8")
 text = fmd.read()
@@ -50,7 +51,7 @@ content += '''</title>
         infiniteLoop: false,
         controls: false,
         mode : "'''
-# -------------------------mode-------------------
+# -------------------------setting mode-------------------
 content += mode + '",'
 content += '''
         });
@@ -79,9 +80,26 @@ if theme:
     content +='''    
     <link rel="stylesheet" href="theme/'''
     content += theme
-    content += '''.css">
-  </head>
-  <body>'''
+    content += '''.css">\n'''
+
+# ================google-analytics================= 
+if ga:
+    content += '''    <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', '
+    '''
+    content +=ga
+    content += '''
+']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+    '''
+
+# ================head ends & body starts ===================
+content += '''\n  </head>\n<body>'''
 
 
 # =======================navi====================
@@ -116,7 +134,17 @@ content += subtitle
 content += '''</div>\n'''
 
 # *****************meta starts **********************
-content += '''<table class="meta">\n<tbody>\n''' 
+
+content += '''<div class="meta">'''
+
+if gravatar_enable and email:
+    import urllib, hashlib
+    gravatar_url = "http:/en.gravatar.com/avatar/" + hashlib.md5(email.lower()).hexdigest() + "?"
+    gravatar_url += urllib.urlencode({'s' : '70'})
+    content += '<img style="float:left;margin:15px;" class="avatar"src="' + gravatar_url +'" alt="avatar" width="70" height="70"/>'
+
+
+content += '''\n<table>\n<tbody>\n''' 
     
 # author
 content += '''<tr class="author"><td>'''
@@ -156,7 +184,7 @@ content += time.strftime("%Y-%m-%d", time.localtime())
 content += '''</td></tr>\n'''
 
 # ********************************meta ends ************************************
-content += '''</tbody>\n</table>\n'''
+content += '''</tbody>\n</table>\n</div>\n'''
      
 # ======================theme========================
 content += '''<div class="theme">'''
@@ -164,7 +192,7 @@ content += theme
 content += ''' theme</div>\n'''
 
 # ============= front page ends=====================
-content += ''' <!-- ================front page==============  -->\n</div></div>'''
+content += ''' <!-- ================front page==============  -->\n<div id="popup" style="margin-top: 60px;width:280px;height:60px;color: #333;display:none;background-color:#ddd;padding: 10px;border-radius: 15px;">Press j / k to Navigate <br>F11 to FullScreen</div></div></div>'''
 
 # ==================trick here=================
 html = html.replace('<h2>', '<hr />\n<h2>')

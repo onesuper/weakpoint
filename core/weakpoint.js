@@ -16,7 +16,8 @@ function weakPoint() {
 	currentSlide = 0;
 	currentChapter = -1;
 	processNavi();
-	
+	popupIn();
+	popupOut();
     }
 
     function addEventListeners() {
@@ -83,4 +84,15 @@ function weakPoint() {
 	    }
 	}
     }
+
+    function popupIn() {
+	$("#popup").fadeIn(1000);
+
+	
+    }
+
+    function popupOut() {
+	$("#popup").fadeOut(3000);
+    }
+
 }

@@ -2,11 +2,17 @@
 
 touch the [demo](http://blog.chengyichao.info/weakpoint/)
 
+
+--------------------
+version 1.2
+
+* popup on the front page
+* gravatar 
+
 ---------------
 version 1.1
 
-Social information
-
+Social information(twiter/email/github)
 
 ---------------
 version 1.0
@@ -19,11 +25,18 @@ version 1.0
 ------------
 version 0.11
 
-Support LaTeX 
+Support LaTeX using MathJax
 
 ---------------
 
-version 0.1
+version 0.1(demo)
+
+* internal movements
+* navigation
+
+--------------------
+
+
 
 ## It is Not
 

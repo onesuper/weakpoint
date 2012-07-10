@@ -1,13 +1,16 @@
 filename: weakpoint.md
 theme: clean
 googlefonts: Eater
+google-analytics: UA-33272534-1
+disqus:
+
 
 meta:
   title: WeakPoint
   subtitle: Weak is more powerful
   author: onesuper
   organization: People Square
-
+  gravatar: true
   contact:
     email: onesuperclark@gmail.com
     twitter: chengyichao
