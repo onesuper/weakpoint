@@ -29,7 +29,17 @@ A powerful **WYSIWG** slideshow editor
 
 
 # Usage
-## Config your slideshow in 'config.yaml'
+
+## 1. Clone the original files
+
+
+    $ git clone https://github.com/onesuper/weakpoint TESTNAME
+    $ cd TESTNAME
+    $ git remote set-url origin \
+	git@github.com: USERNAME/TESTNAME.git
+    $ git push origin master
+
+## 2. Config your slideshow in 'config.yaml'
 
 	filename: weakpoint.md
 	theme: clean
@@ -44,7 +54,7 @@ A powerful **WYSIWG** slideshow editor
 [config.yaml of this slideshow](config.yaml)
 
 
-## Write your own Markdown file 
+## 3. Write your own Markdown file 
 
 	# Chapter 1
 	
@@ -58,10 +68,19 @@ A powerful **WYSIWG** slideshow editor
 	
 [markdown of this slideshow](weakpoint.md)
 
-## Deploy it by typing 'python bootstrap.py'
+## 4. Build slides by typing 'python bootstrap.py'
+
+    $ python bootstrap.py
+ 
+
+## 5. Deploy them to Github Pages
 
 
-![](img/cmd.png)
+    $ git checkout -- orphan gh-pages
+    $ git add .
+    $ git commit -m 'First page commit for my slides'
+    $ git push origin gh-pages
+
 
 
 # Misc

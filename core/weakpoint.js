@@ -92,7 +92,7 @@ function weakPoint() {
     }
 
     function popupOut() {
-	$("#popup").fadeOut(3000);
+	$("#popup").fadeOut(6000);
     }
 
 }

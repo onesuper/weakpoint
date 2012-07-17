@@ -94,8 +94,10 @@ ul {
 pre {
     
     padding: 10px;
-    background: #eee;
-    border: 1px dashed #666
+    background: #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
     
 }
 

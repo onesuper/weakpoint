@@ -51,7 +51,7 @@
   <li class="github"><a href="http://github.com/onesuper" target="_blank">Github</a></li>
 </ul></td></tr>
 <tr class="organization"><td>People Square</td></tr>
-<tr class="date"><td>2012-07-10</td></tr>
+<tr class="date"><td>2012-07-18</td></tr>
 </tbody>
 </table>
 </div>
@@ -160,7 +160,28 @@
     <div class="paper"><div class="paper-container">
     <!-- =========================SLIDE==========================-->
     
-<h2>Config your slideshow in 'config.yaml'</h2>
+<h2>1. Clone the original files</h2>
+<pre><code>$ git clone https://github.com/onesuper/weakpoint TESTNAME
+$ cd TESTNAME
+$ git remote set-url origin \
+git@github.com: USERNAME/TESTNAME.git
+$ git push origin master
+</code></pre>
+
+    <!-- ====================================================== -->
+    </div></div>
+
+
+
+
+
+
+    
+    
+    <div class="paper"><div class="paper-container">
+    <!-- =========================SLIDE==========================-->
+    
+<h2>2. Config your slideshow in 'config.yaml'</h2>
 <pre><code>filename: weakpoint.md
 theme: clean
 googlefonts: Eater
@@ -186,7 +207,7 @@ meta:
     <div class="paper"><div class="paper-container">
     <!-- =========================SLIDE==========================-->
     
-<h2>Write your own Markdown file</h2>
+<h2>3. Write your own Markdown file</h2>
 <pre><code># Chapter 1
 
 ## It is a headline
@@ -212,8 +233,29 @@ It is a lovely day.
     <div class="paper"><div class="paper-container">
     <!-- =========================SLIDE==========================-->
     
-<h2>Deploy it by typing 'python bootstrap.py'</h2>
-<p><img alt="" src="img/cmd.png" /></p>
+<h2>4. Build slides by typing 'python bootstrap.py'</h2>
+<pre><code>$ python bootstrap.py
+</code></pre>
+
+    <!-- ====================================================== -->
+    </div></div>
+
+
+
+
+
+
+    
+    
+    <div class="paper"><div class="paper-container">
+    <!-- =========================SLIDE==========================-->
+    
+<h2>5. Deploy them to Github Pages</h2>
+<pre><code>$ git checkout -- orphan gh-pages
+$ git add .
+$ git commit -m 'First page commit for my slides'
+$ git push origin gh-pages
+</code></pre>
 
     <!-- ====================================================== -->
     </div></div>
