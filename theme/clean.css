@@ -6,16 +6,16 @@ html {
 
 body {
 
-    background: -webkit-linear-gradient(top, #222 0%,#777 50%, #777 50%, #222 100%);
-    background: -moz-linear-gradient(top, #222 0%, #777 50%, #777 50%, #222 100%);
+    //background: -webkit-linear-gradient(top, #222 0%,#777 50%, #777 50%, #222 100%);
+    //background: -moz-linear-gradient(top, #222 0%, #777 50%, #777 50%, #222 100%);
     display: table-cell;
     vertical-align: middle;   
-    font-family: Arial ,sans-serif;
+    font-family: Verdana, Arial,sans-serif;
     
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 95px;
     text-align: center;
     margin-top: 200px;
     color: #111;
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 48px;
     color: #111;
     font-family: 'Lato', Times, 'Times New Roman', serif;
 }
@@ -124,36 +124,39 @@ strong {
     text-align:center;
     margin-left: 10px;
     padding: 2px 6px 2px 6px;
-    color: #fff;
+    color: #ccc;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .navi .current {
-    color: #333;
+    color: #111;
     background: #fff;
     
 }
 
 
 .paper {
-    width: 800px;
-    height: 600px;
-    background: #FFFFFF;
-    font-size: 28px;
+    //width: 100%;
+    //height: 100%;
+    //background: #eee;
+    font-size: 32px;
     color: #444;
     text-shadow: rgba(0, 0, 0, 0.246094) 0 1px 1px;
 }
 
 
 .paper-container {
-    padding: 50px;
+    padding: 5% 20%;
+    height: 90%;
+    width: 60%;
+    background: #fff;
 }
 
 
 #wrapper {
-    width: 800px;
-    height: 600px;
+    //width: 1000px;
+    //height: 100%;
     margin: 0px auto;
 }
 

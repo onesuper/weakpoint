@@ -20,5 +20,4 @@ slide:
   navi: true
   ribbon: true
   latex: true
-  mode: fade         # in { horizontal, vertical, fade }
-  speed: 800
+  

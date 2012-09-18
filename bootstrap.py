@@ -24,7 +24,6 @@ googlefonts = config['googlefonts']
 navi_enable = config['slide']['navi']
 ribbon_enable = config['slide']['ribbon']
 latex_enable = config['slide']['latex']
-mode = config['slide']['mode']
 gravatar_enable = config['meta']['gravatar']
 ga = config['google-analytics']
 # =======read the markdown file and convert it to html ========
@@ -50,10 +49,10 @@ content += '''</title>
     bxslide = $('#slider1').bxSlider({
         infiniteLoop: false,
         controls: false,
-        mode : "'''
-# -------------------------setting mode-------------------
-content += mode + '",'
-content += '''
+        mode: 'horizontal',
+        speed: 200,
+        onBeforeSlide: function(){onSwitch=true},
+        onAfterSlide: function(){onSwitch=false}
         });
 });
     </script>'''
@@ -190,7 +189,7 @@ content += theme
 content += ''' theme</div>\n'''
 
 # ============= front page ends=====================
-content += ''' <!-- ================front page==============  -->\n<div id="popup" style="margin-top: 60px;width:280px;height:60px;color: #333;display:none;background-color:#ddd;padding: 10px;border-radius: 15px;">Press j / k to Navigate <br>F11 to FullScreen</div></div></div>'''
+content += ''' <!-- ================front page==============  -->\n<div id="popup" style="margin-top: 60px;width:380px;height:120px;color: #333;display:none;background-color:#ddd;padding: 20px;border-radius: 15px;">Press j / k to Navigate <br>F11 to FullScreen</div></div></div>'''
 
 # ==================trick here=================
 html = html.replace('<h2>', '<hr />\n<h2>')

@@ -12,7 +12,10 @@
     bxslide = $('#slider1').bxSlider({
         infiniteLoop: false,
         controls: false,
-        mode : "fade",
+        mode: 'horizontal',
+        speed: 200,
+        onBeforeSlide: function(){onSwitch=true},
+        onAfterSlide: function(){onSwitch=false}
         });
 });
     </script>
@@ -51,13 +54,13 @@
   <li class="github"><a href="http://github.com/onesuper" target="_blank">Github</a></li>
 </ul></td></tr>
 <tr class="organization"><td>People Square</td></tr>
-<tr class="date"><td>2012-07-18</td></tr>
+<tr class="date"><td>2012-09-18</td></tr>
 </tbody>
 </table>
 </div>
 <div class="theme">clean theme</div>
  <!-- ================front page==============  -->
-<div id="popup" style="margin-top: 60px;width:280px;height:60px;color: #333;display:none;background-color:#ddd;padding: 10px;border-radius: 15px;">Press j / k to Navigate <br>F11 to FullScreen</div></div></div>
+<div id="popup" style="margin-top: 60px;width:380px;height:120px;color: #333;display:none;background-color:#ddd;padding: 20px;border-radius: 15px;">Press j / k to Navigate <br>F11 to FullScreen</div></div></div>
 
 
 
