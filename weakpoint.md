@@ -112,3 +112,4 @@ $$
 
 * [用Markdown写幻灯片，用浏览器展示](http://blog.chengyichao.info/2012/06/17/slideshow-in-markdown/)
 * [WeakPoint v1.0](http://blog.chengyichao.info/2012/07/07/weakpoint-v1)
+* [Redisign of a Slideshow Creation Tool](http://blog.chengyichao.info/2012/10/14/redisign-of-a-slideshow-creation-tool/)
