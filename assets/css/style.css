@@ -1,0 +1,152 @@
+html, body {
+    font-family: Georgia, Helvetica, Arial, serif;
+    background: -webkit-linear-gradient(top, #272727 0%,#444 50%, #444 50%, #272727 100%);
+    background: -moz-linear-gradient(top, #2727272 0%, #444 50%, #444 50%, #272727 100%);    
+
+    color: #d9d9d9;
+}
+
+.step {
+    width: 900px;
+}
+
+.title {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Georgia, Helvetica, Arial, serif;
+    text-shadow: 5px 5px 5px #000;
+}
+
+.subtitle {
+    font-family: Eater;
+    font-size: 45px;
+    color: #a6ca48;
+}
+.box {
+    margin-top: 50px;
+    float: right;
+
+}
+
+.meta {
+    font-size: 35px;
+    text-align:center;
+    
+}
+
+
+ul, ol, p {
+    font-size:30px;
+    color: white
+    font-family: 'PT Serif', Georgia, serif;
+    text-shadow: 1px 1px 1px #333333;
+}
+
+.title {
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    font-family: Georgia, Helvetica, Arial, serif;
+    color: white;
+}
+
+h1 {
+    color: #FF96C5;
+    font-size:50px;
+}
+h2 {
+    font-size:40px;
+    color: #a6ca48;
+    text-shadow:2px 2px 2px #333333;
+}
+h3 {
+    font-size:35px;
+    color: black;
+}
+
+
+
+pre {
+    background: #DDDDDD;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 25px;
+}
+
+
+a {
+    background: transparent;
+    color: #A8E9FF;
+}
+
+
+code {
+    background: #DDDDDD;
+    color: black;
+    text-shadow: none;
+    border-radius: 5px;
+}
+
+.navi {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    list-style-type: none;
+    font-size: 22px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+
+.navi li {
+    margin-top: 10px;
+}
+
+.navi li:hover {
+    margin-left: 10px;
+}
+
+.navi a {
+    background: transparent;
+    color: #FF96C5;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 0px 12px;
+    text-shadow: none;
+    font-weight:bold;
+
+}
+
+
+#ing b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#ing.present b {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform:    rotate(-10deg);
+    -ms-transform:     rotate(-10deg);
+    -o-transform:      rotate(-10deg);
+    transform:         rotate(-10deg);
+
+    -webkit-transition-delay: 0.25s;
+    -moz-transition-delay:    0.25s;
+    -ms-transition-delay:     0.25s;
+    -o-transition-delay:      0.25s;
+    transition-delay:         0.25s;
+}
+
+
+strong {
+    color: #FF96C5;
+}
