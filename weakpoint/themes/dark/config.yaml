@@ -1,0 +1,30 @@
+#
+# WeakPoint
+# Weak is more powerful 
+#
+
+# Favorites
+markup: markdown
+
+
+# Slides Settings
+# Google Analytics
+analytics: 234123
+
+# Google Fonts
+# fonts: font1|font2
+fonts: Eater|PT+Serif
+
+
+# enable navi bar?
+navi: True
+
+# Meta Info
+title: WeakPoint
+subtitle: Weak is More Powerful
+author: onesuper
+
+# optional
+site: http://chengyichao.info
+organization: press spacebar or ->
+

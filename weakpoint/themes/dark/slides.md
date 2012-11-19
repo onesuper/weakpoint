@@ -1,11 +1,4 @@
 
-0.2.1
-
-    pip install weakpoint
-
-
-----
-
 # What It Is?
 ----
 
