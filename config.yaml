@@ -1,23 +1,30 @@
-filename: weakpoint.md
-theme: clean
-googlefonts: Eater
-google-analytics: UA-33272534-1
-disqus:
+#
+# WeakPoint
+# Weak is more powerful 
+#
+
+# Favorites
+markup: markdown
 
 
-meta:
-  title: WeakPoint
-  subtitle: Weak is more powerful
-  author: onesuper
-  organization: WTO
-  gravatar: true
-  contact:
-    email: onesuperclark@gmail.com
-    twitter: chengyichao
-    github: onesuper
-    
-slide:
-  navi: true
-  ribbon: true
-  latex: true
-  
+# Slides Settings
+# Google Analytics
+analytics: UA-33272534-1
+
+# Google Fonts
+# fonts: font1|font2
+fonts: Eater|PT+Serif
+
+
+# enable navi bar?
+navi: True
+
+# Meta Info
+title: WeakPoint
+subtitle: Weak is More Powerful
+author: onesuper
+
+# optional
+site: http://chengyichao.info
+organization: press spacebar or ->
+

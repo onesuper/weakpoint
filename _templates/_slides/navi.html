@@ -1,0 +1,12 @@
+{% if navi %}
+
+<ul class="navi">
+<li><a href="#/step-1">Cover</a></li>
+
+{% for navi in navi %}
+<li><a href="#/step-{{ navi.no }}">{{ navi.title }}</a></li>
+{% endfor %}
+
+</ul>
+
+{% endif %}
