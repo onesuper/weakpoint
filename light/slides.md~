@@ -3,18 +3,17 @@
 ----
 
 
-## It is...
 
-a static slideshow generator
+## It Is
 
-
+* a static slideshow generator
 * use **Markdown** to write your slides
 * display your slides in Web browser
 
 
 ----
 
-## It Is Not...
+## It Is Not
 
 * a powerful slideshow creator
 * WYSIWYG
@@ -77,11 +76,9 @@ You can release it like static web pages.
 
 ----
 
-# Misc
+# Dependencies
 
 ----
-
-## Dependencies
 
 The technologies behind WeakPoint:
 
@@ -92,22 +89,4 @@ The technologies behind WeakPoint:
 
 ----
 
-## How to Make a Theme
-
-
-WeakPoint uses [Jinja2](http://jinja.pocoo.org/) as a templete engine.
-
-
-You can get the content of slides by writing:
-
-
-    {% for slide in slides %}
-        <div class="content">{{ slide.content }}</div>
-    {% endfor %}
-
-
-----
-
-# Thanks
-
-
+# Thanks!

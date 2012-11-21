@@ -1,9 +1,11 @@
 html, body {
-    font-family: Georgia, Helvetica, Arial, serif;
-    background: -webkit-linear-gradient(top, #272727 0%,#444 50%, #444 50%, #272727 100%);
-    background: -moz-linear-gradient(top, #2727272 0%, #444 50%, #444 50%, #272727 100%);    
-
-    color: #d9d9d9;
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));    
 }
 
 .step {
@@ -14,32 +16,30 @@ html, body {
     font-size: 70px;
     font-weight: bold;
     font-family: Georgia, Helvetica, Arial, serif;
-    text-shadow: 5px 5px 5px #000;
+    text-shadow: 5px 5px 5px #CCCCCC;
 }
 
 .subtitle {
     font-family: Eater;
     font-size: 45px;
-    color: #a6ca48;
+    color: #aaa;
 }
 .box {
     margin-top: 50px;
     float: right;
-
 }
 
 .meta {
     font-size: 35px;
     text-align:center;
-    
 }
 
 
 ul, ol, p {
     font-size:30px;
-    color: white
+    color: black;
     font-family: 'PT Serif', Georgia, serif;
-    text-shadow: 1px 1px 1px #333333;
+    text-shadow: 1px 1px 1px #CCCCCC
 }
 
 .title {
@@ -48,17 +48,15 @@ ul, ol, p {
 h1, h2, h3, h4 {
     font-weight: bold;
     font-family: Georgia, Helvetica, Arial, serif;
-    color: white;
 }
 
 h1 {
-    color: #FF96C5;
     font-size:50px;
 }
 h2 {
     font-size:40px;
-    color: #a6ca48;
-    text-shadow:2px 2px 2px #333333;
+    color: #830000;
+    text-shadow:2px 2px 2px #CCCCCC;
 }
 h3 {
     font-size:35px;
@@ -68,8 +66,8 @@ h3 {
 
 
 pre {
-    background: #DDDDDD;
-    color: black;
+    background: #222222;
+    color: #FFFFFF;
     padding: 10px;
     border-radius: 5px;
     font-family: monospace;
@@ -79,13 +77,13 @@ pre {
 
 a {
     background: transparent;
-    color: #A8E9FF;
+    color: #4183C4;
 }
 
 
 code {
-    background: #DDDDDD;
-    color: black;
+    background: #222;
+    color: white;
     text-shadow: none;
     border-radius: 5px;
 }
@@ -112,8 +110,8 @@ code {
 }
 
 .navi a {
-    background: transparent;
-    color: #FF96C5;
+    background: black;
+    color: #FFFFFF;
     margin-top: 20px;
     text-decoration: none;
     padding: 0px 12px;
@@ -145,22 +143,3 @@ code {
     -o-transition-delay:      0.25s;
     transition-delay:         0.25s;
 }
-
-
-strong {
-    color: #FF96C5;
-}
-
-
-.impress-enabled .step {
-
-    opacity: 0.1;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
-}
-
-.impress-enabled .step.active { opacity: 1 }

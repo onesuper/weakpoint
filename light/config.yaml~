@@ -9,7 +9,7 @@ markup: markdown
 
 # Slides Settings
 # Google Analytics
-analytics: UA-33272534-1
+analytics: 234123
 
 # Google Fonts
 # fonts: font1|font2
@@ -26,5 +26,6 @@ author: onesuper
 
 # optional
 site: http://chengyichao.info
-organization: press spacebar or ->
+organization: 
+
 
