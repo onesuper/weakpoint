@@ -23,13 +23,12 @@ setup(
     install_requires = [
         'Jinja2',
         'misaka',
-        'Pygments',
         'PyYAML',
     ],
     platforms = 'any',
     zip_safe = False,
     classifiers = [
-        'Development Status :: 4 - Beta',
+        'Development Status :: Beta',
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

@@ -145,3 +145,17 @@ code {
     -o-transition-delay:      0.25s;
     transition-delay:         0.25s;
 }
+
+
+.impress-enabled .step {
+
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }

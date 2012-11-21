@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="assets/css/style.css">
+
+  
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '234123']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+  
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Eater|PT+Serif" type="text/css">
+
+  
+  <title>WeakPoint  &ndash; Weak is More Powerful </title>
+  
+</head>
+<body>
+    
+
+<ul class="navi">
+<li><a href="#/step-1">Cover</a></li>
+
+
+<li><a href="#/step-2">What It Is?</a></li>
+
+<li><a href="#/step-5">Quickstart</a></li>
+
+<li><a href="#/step-10">Misc</a></li>
+
+<li><a href="#/step-13">Thanks</a></li>
+
+
+</ul>
+
+
+  <div id="impress">
+    <!--========================= cover ============================-->
+<div class="step" data-x="1000" data-rotate="0">
+  <div class="title">WeakPoint</div>
+  <div class="subtitle">Weak is More Powerful</div>
+  <div class="box">
+    <div class="meta">onesuper</div>
+    <div class="meta">press spacebar or -></div>
+    
+  </div>
+</div>
+<!--========================= cover ============================-->
+    
+
+
+
+
+
+
+
+  <div class="step" data-x="2400" data-rotate="0" data-scale="1">
+  <h1>What It Is?</h1>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="3600" data-rotate="0" data-scale="1">
+  
+
+<h2>It is...</h2>
+
+<p>a static slideshow generator</p>
+
+<ul>
+<li>use <strong>Markdown</strong> to write your slides</li>
+<li>display your slides in Web browser</li>
+</ul>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="4800" data-rotate="0" data-scale="1">
+  
+
+<h2>It Is Not...</h2>
+
+<ul>
+<li>a powerful slideshow creator</li>
+<li>WYSIWYG</li>
+</ul>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="6000" data-rotate="90" data-scale="1">
+  
+
+<h1>Quickstart</h1>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="7200" data-rotate="90" data-scale="1">
+  
+
+<h2>Install</h2>
+
+<p>The recommended way to install WeakPoint is to use pip:</p>
+
+<pre><code>$ pip install weakpoint
+</code></pre>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="8400" data-rotate="90" data-scale="1">
+  
+
+<h2>Create a template</h2>
+
+<pre><code>$ weakpoint init ~/my-file
+</code></pre>
+
+<p>The default theme is &quot;light&quot; and you can specify it
+with &quot;-t&quot; option:</p>
+
+<pre><code>$ weakpoint init ~/my-file -t dark
+</code></pre>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="9600" data-rotate="90" data-scale="1">
+  
+
+<h2>Write &amp; config your slides</h2>
+
+<ul>
+<li>Open <code>~/my-file/slides.md</code> and write your slides in Markdown </li>
+<li>Edit <code>~/my-file/config.yaml</code> to config your slides</li>
+</ul>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="10800" data-rotate="90" data-scale="1">
+  
+
+<h2>Generate the slideshow</h2>
+
+<pre><code>$ weakpoint gen
+</code></pre>
+
+<p>That&#39;s all! Now your slideshow is in <code>~/my-file/index.html</code>.</p>
+
+<p>You can release it like static web pages.</p>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="12000" data-rotate="180" data-scale="1">
+  
+
+<h1>Misc</h1>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="13200" data-rotate="180" data-scale="1">
+  
+
+<h2>Dependencies</h2>
+
+<p>The technologies behind WeakPoint:</p>
+
+<ul>
+<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+<li><a href="http://misaka.61924.nl/">misaka</a></li>
+<li><a href="http://pyyaml.org/">PyYAML</a></li>
+<li><a href="http://bartaz.github.com/impress.js">impress.js</a></li>
+</ul>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="14400" data-rotate="180" data-scale="1">
+  
+
+<h2>How to Make a Theme</h2>
+
+<p>WeakPoint uses <a href="http://jinja.pocoo.org/">Jinja2</a> as a templete engine.</p>
+
+<p>You can get the content of slides by writing:</p>
+
+<pre><code>{% for slide in slides %}
+    &lt;div class=&quot;content&quot;&gt;{{ slide.content }}&lt;/div&gt;
+{% endfor %}
+</code></pre>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="15600" data-rotate="270" data-scale="1">
+  
+
+<h1>Thanks</h1>
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+
+</div>
+
+
+
+   </div>
+
+  <script src="assets/js/impress.js" type="text/javascript"></script>
+<script>impress().init();</script>
+
+<a href="https://github.com/onesuper/weakpoint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+</body>
+</html>

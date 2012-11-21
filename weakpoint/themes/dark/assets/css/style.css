@@ -150,3 +150,17 @@ code {
 strong {
     color: #FF96C5;
 }
+
+
+.impress-enabled .step {
+
+    opacity: 0.1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }

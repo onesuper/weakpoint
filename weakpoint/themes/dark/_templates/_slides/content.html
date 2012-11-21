@@ -4,9 +4,12 @@
 
 
 {% for slide in slides %}
-<div class="step" data-x="{{slide.x}}" data-rotate="{{slide.rotate}}">
-{{ slide.content }}
-</div>
+
+
+  <div class="step" data-x="{{ slide.no * 1200 }}" data-rotate="{{slide.chapter * 90}}" data-scale="1">
+  {{ slide.content }}
+  </div>
+
 <!--================================slide==============================-->
 
 

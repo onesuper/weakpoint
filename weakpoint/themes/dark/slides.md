@@ -110,4 +110,3 @@ You can get the content of slides by writing:
 
 # Thanks
 
-
