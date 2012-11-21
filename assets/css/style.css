@@ -123,7 +123,7 @@ code {
 }
 
 
-#ing b {
+.step strong {
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -132,7 +132,7 @@ code {
     transition:         0.5s;
 }
 
-#ing.present b {
+.step.present strong {
     -webkit-transform: rotate(-10deg);
     -moz-transform:    rotate(-10deg);
     -ms-transform:     rotate(-10deg);

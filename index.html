@@ -40,7 +40,7 @@
 
 <li><a href="#/step-10">Misc</a></li>
 
-<li><a href="#/step-13">Thanks</a></li>
+<li><a href="#/step-15">Thank you</a></li>
 
 
 </ul>
@@ -88,7 +88,7 @@
 
 <ul>
 <li>use <strong>Markdown</strong> to write your slides</li>
-<li>display your slides in Web browser</li>
+<li>display your slides in web browser</li>
 </ul>
 
 
@@ -107,8 +107,9 @@
 <h2>It Is Not...</h2>
 
 <ul>
-<li>a powerful slideshow creator</li>
+<li>a powerful slideshow authoring tool</li>
 <li>WYSIWYG</li>
+<li>a food</li>
 </ul>
 
 
@@ -165,7 +166,7 @@
 </code></pre>
 
 <p>The default theme is &quot;light&quot; and you can specify it
-with &quot;-t&quot; option:</p>
+with <code>-t</code> option:</p>
 
 <pre><code>$ weakpoint init ~/my-file -t dark
 </code></pre>
@@ -208,9 +209,9 @@ with &quot;-t&quot; option:</p>
 <pre><code>$ weakpoint gen
 </code></pre>
 
-<p>That&#39;s all! Now your slideshow is in <code>~/my-file/index.html</code>.</p>
+<p>Now your slideshow is in <code>~/my-file/index.html</code>.</p>
 
-<p>You can release it like static web pages.</p>
+<p>You can open it in a <strong>browser</strong>.</p>
 
 
   </div>
@@ -245,10 +246,10 @@ with &quot;-t&quot; option:</p>
 <p>The technologies behind WeakPoint:</p>
 
 <ul>
-<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-<li><a href="http://misaka.61924.nl/">misaka</a></li>
-<li><a href="http://pyyaml.org/">PyYAML</a></li>
-<li><a href="http://bartaz.github.com/impress.js">impress.js</a></li>
+<li><a href="http://jinja.pocoo.org/">Jinja2</a>: Template system</li>
+<li><a href="http://misaka.61924.nl/">misaka</a>: Markdown engine</li>
+<li><a href="http://pyyaml.org/">PyYAML</a>: YAML format config</li>
+<li><a href="http://bartaz.github.com/impress.js">Impress.js</a>: Awesome presentation effect </li>
 </ul>
 
 
@@ -285,10 +286,63 @@ with &quot;-t&quot; option:</p>
 
 
 
-  <div class="step" data-x="15600" data-rotate="270" data-scale="1">
+  <div class="step" data-x="15600" data-rotate="180" data-scale="1">
   
 
-<h1>Thanks</h1>
+<h2>Make the most of Impressing.js</h2>
+
+<p>You could position the slides by using:</p>
+
+<ol>
+<li><code>slide.no</code></li>
+<li><code>slide.chapter</code></li>
+<li><code>slide.section</code></li>
+</ol>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="16800" data-rotate="180" data-scale="1">
+  
+
+<p>The template code behind <a href="http://blog.chengyichao.info/weakpoint/light">this slideshow</a> looks like:</p>
+
+<pre><code>{% if slide.section == 0 %}
+    &lt;div class=&quot;step&quot; data-x=&quot;2200&quot; 
+                      data-y=&quot;{{ slide.chapter*3000 - 1000}}&quot;
+                      data-rotate=&quot;-90&quot;
+                      data-scale=&quot;4&quot;&gt;
+    {{ slide.content }}&lt;/div&gt;
+{% else %}
+    &lt;div class=&quot;step&quot; data-x=&quot;3000&quot;
+                      data-y=&quot;{{ slide.chapter * 3000 + slide.section * 600 - 1000 }}&quot;
+                      data-rotate=&quot;0&quot;
+                      data-scale=&quot;1&quot;&gt;
+    {{ slide.content }}&lt;/div&gt;
+{% endif %}
+</code></pre>
+
+
+  </div>
+
+<!--================================slide==============================-->
+
+
+
+
+
+
+  <div class="step" data-x="18000" data-rotate="270" data-scale="1">
+  
+
+<h1>Thank you</h1>
 
   </div>
 
