@@ -322,7 +322,8 @@ with <code>-t</code> option:</p>
     {{ slide.content }}&lt;/div&gt;
 {% else %}
     &lt;div class=&quot;step&quot; data-x=&quot;3000&quot;
-                      data-y=&quot;{{ slide.chapter * 3000 + slide.section * 600 - 1000 }}&quot;
+                      data-y=&quot;{{ slide.chapter * 3000 +
+                                      slide.section * 600 - 1000 }}&quot;
                       data-rotate=&quot;0&quot;
                       data-scale=&quot;1&quot;&gt;
     {{ slide.content }}&lt;/div&gt;

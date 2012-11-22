@@ -1,5 +1,5 @@
 html, body {
-    font-family: Georgia, Helvetica, Arial, serif;
+   font-family: 'PT Serif', Georgia, serif;
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
     background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
@@ -16,7 +16,7 @@ html, body {
 .title {
     font-size: 70px;
     font-weight: bold;
-    font-family: Georgia, Helvetica, Arial, serif;
+    font-family: 'PT Serif', Georgia, serif;
     text-shadow: 5px 5px 5px #CCCCCC;
 }
 
@@ -49,7 +49,7 @@ ul, ol, p {
 
 h1, h2, h3, h4 {
     font-weight: bold;
-    font-family: Georgia, Helvetica, Arial, serif;
+    font-family: 'PT Serif', Georgia, serif;
 }
 
 h1 {
@@ -87,7 +87,7 @@ code {
     background: #222;
     color: white;
     text-shadow: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .navi {
