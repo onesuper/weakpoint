@@ -28,7 +28,7 @@ setup(
     platforms = 'any',
     zip_safe = False,
     classifiers = [
-        'Development Status :: Beta',
+        'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

@@ -68,7 +68,7 @@ class WeakPoint(object):
         self.dest = Directory(self.opts['dest'])
         self.src = Directory(self._get_theme(self.opts['theme']))
 
-        if not self.src.exist:
+        if not self.src.exists:
             raise OptionException('Theme not found.')
 
         # copy the ./theme/{theme} to the dest

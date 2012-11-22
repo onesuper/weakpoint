@@ -1,5 +1,5 @@
-html, body {
-    font-family: Georgia, Helvetica, Arial, serif;
+body {
+    font-family: 'PT Serif', Georgia, serif;
     background: -webkit-linear-gradient(top, #272727 0%,#444 50%, #444 50%, #272727 100%);
     background: -moz-linear-gradient(top, #2727272 0%, #444 50%, #444 50%, #272727 100%);    
 
@@ -13,7 +13,7 @@ html, body {
 .title {
     font-size: 70px;
     font-weight: bold;
-    font-family: Georgia, Helvetica, Arial, serif;
+    font-family: 'PT Serif', Georgia, serif;
     text-shadow: 5px 5px 5px #000;
 }
 
@@ -37,7 +37,7 @@ html, body {
 
 ul, ol, p {
     font-size:30px;
-    color: white
+    color: white;
     font-family: 'PT Serif', Georgia, serif;
     text-shadow: 1px 1px 1px #333333;
 }
