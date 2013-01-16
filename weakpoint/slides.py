@@ -23,7 +23,7 @@ class Slides(object):
     '''
 
     def  __init__(self, content):
-        slides = re.compile(r'<hr>').split(content)
+        slides = re.compile(r'<hr\s*[/]?>').split(content)
         self.slides = []  # a linear structure
         self.navi = [] # for navi bar
 
