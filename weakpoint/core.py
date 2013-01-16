@@ -9,7 +9,7 @@ from weakpoint import __version__
 from weakpoint.fs import Directory, File 
 from weakpoint.utils import normpath
 from weakpoint.config import Config
-from weakpoint.parsers import markdown
+from weakpoint.parsers import markdown_parser, misaka_parser
 from weakpoint.renderers import Renderer
 from weakpoint.exceptions import OptionException, RendererException
 from weakpoint.slides import Slides
@@ -92,8 +92,9 @@ class WeakPoint(object):
             print "slides.md is required, abort"
             sys.exit(1)
         if self.config['markup'] == 'markdown':
-            return markdown.Parser().parse(path.content)
-            
+            return markdown_parser.Parser().parse(path.content)
+        elif self.config['markup'] == 'misaka':
+            return misaka_parser.Parser().parse(path.content)
         else:
             print 'no such markup: {0}'.format(config['markup'])
             sys.exit(1)
