@@ -23,6 +23,7 @@ setup(
     install_requires = [
         'Jinja2',
         'misaka',
+        'markdown',
         'PyYAML',
     ],
     platforms = 'any',
