@@ -24,7 +24,8 @@ class WeakPoint(object):
     # in case read key error, we make some 
     # default choices
     default_config = {
-        'markup': 'misaka'
+        'markup': 'misaka',
+        'engine': 'jmpress'
     }
 
     def __init__(self, args = None):
