@@ -97,6 +97,7 @@ The technologies behind WeakPoint:
 * [Python-Markdown](http://packages.python.org/Markdown/)
 * [PyYAML](http://pyyaml.org/)
 * [impress.js](http://bartaz.github.com/impress.js)
+* [jmpress.js](https://github.com/shama/jmpress.js/)
 
 ----
 
