@@ -5,7 +5,7 @@
 
 # Favorites
 markup: markdown
-
+engine: jmpress
 
 # Slides Settings
 # Google Analytics

@@ -11,7 +11,11 @@
 </head>
 <body>
     {% include '_slides/navi.html'%}
+  {% if engine=="jmpress" %}
+  <div id="jmpress">
+  {% else %}
   <div id="impress">
+  {% endif %}
     {% include '_slides/cover.html' %}
     {% include '_slides/content.html' %}
    </div>

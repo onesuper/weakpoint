@@ -94,8 +94,10 @@ The technologies behind WeakPoint:
 
 * [Jinja2](http://jinja.pocoo.org/)
 * [misaka](http://misaka.61924.nl/)
+* [Python-Markdown](http://packages.python.org/Markdown/)
 * [PyYAML](http://pyyaml.org/)
 * [impress.js](http://bartaz.github.com/impress.js)
+* [jmpress.js](https://github.com/shama/jmpress.js/)
 
 ----
 

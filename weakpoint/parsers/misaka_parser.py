@@ -1,17 +1,10 @@
+import misaka
 
-
-
-import misaka as m
-
-
-
-class Render(m.HtmlRenderer):
+class Render(misaka.HtmlRenderer):
     pass
 
 class Parser():
 
     def parse(self, markdown):
-        html = m.Markdown(Render())
+        html = misaka.Markdown(Render())
         return html.render(markdown) 
-
-
