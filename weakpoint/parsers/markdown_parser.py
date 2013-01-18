@@ -8,7 +8,8 @@ except ImportError:
 
 class Parser():
     def parse(self, src):
-        plugins = ['def_list', 'footnotes']
+        plugins = ['extra']
+        pyg = 'codehilite(css_class=highlight,force_linenos=False)'
         if have_pygments:
-            plugins.append('codehilite(css_class=highlight)')
+            plugins.append(pyg)
         return m.markdown(src, plugins)
