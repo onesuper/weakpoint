@@ -1,5 +1,11 @@
 import markdown as m
 
+
+# If you have pygments installed, WeakPoint will highlight
+# the code automatically. Actually, I was considering to make
+# pygements as a dependency of WeakPoint and let user config 
+# whether to highlight the code in config.xml
+
 try:
     import pygments
     have_pygments = True

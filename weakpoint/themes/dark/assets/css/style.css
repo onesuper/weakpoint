@@ -31,7 +31,7 @@ body {
 .meta {
     font-size: 35px;
     text-align:center;
-    
+    color: white;
 }
 
 
@@ -43,6 +43,7 @@ ul, ol, p {
 }
 
 .title {
+    color: white;
 }
 
 h1, h2, h3, h4 {

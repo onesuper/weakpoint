@@ -16,7 +16,7 @@ a static slideshow generator
 
 ## It Is Not...
 
-* a powerful slideshow creator
+* a powerful slideshow authoring tool
 * WYSIWYG
 
 ----
@@ -81,6 +81,29 @@ You can release it like static web pages.
 
 ----
 
+## Substeps
+
+<p data-jmpress="fade">Fade</p>
+<p data-jmpress="appear">appear</p>
+<p data-jmpress="warp-right">warp-right</p>
+<p data-jmpress="drive-up">drive-up</p>
+
+----
+
+
+## Code Highlighting
+
+    var setArray = function(elems) {
+        this.length = 0;
+        push.apply(this, elems);
+        return this;
+    }
+
+
+
+----
+
+
 ## Dependencies
 
 The technologies behind WeakPoint:
@@ -94,7 +117,7 @@ The technologies behind WeakPoint:
 
 ----
 
-## How to Make a Theme
+## Custom Theme
 
 
 WeakPoint uses [Jinja2](http://jinja.pocoo.org/) as a templete engine.
