@@ -3,9 +3,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pygments.css">
+
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/basic-animations.css">
 
   
-
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '234123']);
@@ -19,9 +22,11 @@
 </script>
 
 
-  
-  
+
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Eater|PT+Serif" type="text/css">
+
+
+
 
   
   <title>WeakPoint  &ndash; Weak is More Powerful </title>
@@ -40,13 +45,15 @@
 
 <li><a href="#/step-10">Misc</a></li>
 
-<li><a href="#/step-15">Thank you</a></li>
+<li><a href="#/step-15">Thanks</a></li>
 
 
 </ul>
 
 
-  <div id="impress">
+  
+  <div id="jmpress">
+  
     <!--========================= cover ============================-->
 <div class="step" data-x="1000" data-rotate="0">
   <div class="title">WeakPoint</div>
@@ -69,7 +76,6 @@
   <div class="step" data-x="2400" data-rotate="0" data-scale="1">
   <h1>What It Is?</h1>
 
-
   </div>
 
 <!--================================slide==============================-->
@@ -81,16 +87,12 @@
 
   <div class="step" data-x="3600" data-rotate="0" data-scale="1">
   
-
 <h2>It is...</h2>
-
 <p>a static slideshow generator</p>
-
 <ul>
 <li>use <strong>Markdown</strong> to write your slides</li>
-<li>display your slides in web browser</li>
+<li>display your slides in Web browser</li>
 </ul>
-
 
   </div>
 
@@ -103,15 +105,11 @@
 
   <div class="step" data-x="4800" data-rotate="0" data-scale="1">
   
-
 <h2>It Is Not...</h2>
-
 <ul>
 <li>a powerful slideshow authoring tool</li>
 <li>WYSIWYG</li>
-<li>a food</li>
 </ul>
-
 
   </div>
 
@@ -124,9 +122,7 @@
 
   <div class="step" data-x="6000" data-rotate="90" data-scale="1">
   
-
 <h1>Quickstart</h1>
-
 
   </div>
 
@@ -139,13 +135,11 @@
 
   <div class="step" data-x="7200" data-rotate="90" data-scale="1">
   
-
 <h2>Install</h2>
-
 <p>The recommended way to install WeakPoint is to use pip:</p>
+<div class="highlight"><pre>$ <span class="n">pip</span> <span class="n">install</span> <span class="n">weakpoint</span>
+</pre></div>
 
-<pre><code>$ pip install weakpoint
-</code></pre>
 
 
   </div>
@@ -159,17 +153,16 @@
 
   <div class="step" data-x="8400" data-rotate="90" data-scale="1">
   
-
 <h2>Create a template</h2>
+<div class="highlight"><pre>$ <span class="n">weakpoint</span> <span class="n">init</span> <span class="o">~/</span><span class="n">my</span><span class="o">-</span><span class="n">file</span>
+</pre></div>
 
-<pre><code>$ weakpoint init ~/my-file
-</code></pre>
 
-<p>The default theme is &quot;light&quot; and you can specify it
-with <code>-t</code> option:</p>
+<p>The default theme is "light" and you can specify it
+with "-t" option:</p>
+<div class="highlight"><pre>$ <span class="n">weakpoint</span> <span class="n">init</span> <span class="o">~/</span><span class="n">my</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">t</span> <span class="n">dark</span>
+</pre></div>
 
-<pre><code>$ weakpoint init ~/my-file -t dark
-</code></pre>
 
 
   </div>
@@ -183,14 +176,11 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="9600" data-rotate="90" data-scale="1">
   
-
 <h2>Write &amp; config your slides</h2>
-
 <ul>
 <li>Open <code>~/my-file/slides.md</code> and write your slides in Markdown </li>
 <li>Edit <code>~/my-file/config.yaml</code> to config your slides</li>
 </ul>
-
 
   </div>
 
@@ -203,16 +193,13 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="10800" data-rotate="90" data-scale="1">
   
-
 <h2>Generate the slideshow</h2>
+<div class="highlight"><pre>$ <span class="n">weakpoint</span> <span class="n">gen</span>
+</pre></div>
 
-<pre><code>$ weakpoint gen
-</code></pre>
 
-<p>Now your slideshow is in <code>~/my-file/index.html</code>.</p>
-
-<p>You can open it in a <strong>browser</strong>.</p>
-
+<p>That's all! Now your slideshow is in <code>~/my-file/index.html</code>.</p>
+<p>You can release it like static web pages.</p>
 
   </div>
 
@@ -225,9 +212,7 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="12000" data-rotate="180" data-scale="1">
   
-
 <h1>Misc</h1>
-
 
   </div>
 
@@ -240,17 +225,14 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="13200" data-rotate="180" data-scale="1">
   
+<h2>Substeps</h2>
+<p data-jmpress="fade">Fade</p>
 
-<h2>Dependencies</h2>
+<p data-jmpress="appear">appear</p>
 
-<p>The technologies behind WeakPoint:</p>
+<p data-jmpress="warp-right">warp-right</p>
 
-<ul>
-<li><a href="http://jinja.pocoo.org/">Jinja2</a>: Template system</li>
-<li><a href="http://misaka.61924.nl/">misaka</a>: Markdown engine</li>
-<li><a href="http://pyyaml.org/">PyYAML</a>: YAML format config</li>
-<li><a href="http://bartaz.github.com/impress.js">Impress.js</a>: Awesome presentation effect </li>
-</ul>
+<p data-jmpress="drive-up">drive-up</p>
 
 
   </div>
@@ -264,17 +246,14 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="14400" data-rotate="180" data-scale="1">
   
+<h2>Code Highlighting</h2>
+<div class="highlight"><pre><span class="n">var</span> <span class="n">setArray</span> <span class="p">=</span> <span class="k">function</span><span class="p">(</span><span class="n">elems</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">this</span><span class="p">.</span><span class="nb">length</span> <span class="p">=</span> 0<span class="p">;</span>
+    <span class="n">push</span><span class="p">.</span><span class="n">apply</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">elems</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">this</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 
-<h2>How to Make a Theme</h2>
-
-<p>WeakPoint uses <a href="http://jinja.pocoo.org/">Jinja2</a> as a templete engine.</p>
-
-<p>You can get the content of slides by writing:</p>
-
-<pre><code>{% for slide in slides %}
-    &lt;div class=&quot;content&quot;&gt;{{ slide.content }}&lt;/div&gt;
-{% endfor %}
-</code></pre>
 
 
   </div>
@@ -288,17 +267,16 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="15600" data-rotate="180" data-scale="1">
   
-
-<h2>Make the most of Impressing.js</h2>
-
-<p>You could position the slides by using:</p>
-
-<ol>
-<li><code>slide.no</code></li>
-<li><code>slide.chapter</code></li>
-<li><code>slide.section</code></li>
-</ol>
-
+<h2>Dependencies</h2>
+<p>The technologies behind WeakPoint:</p>
+<ul>
+<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+<li><a href="http://misaka.61924.nl/">misaka</a></li>
+<li><a href="http://packages.python.org/Markdown/">Python-Markdown</a></li>
+<li><a href="http://pyyaml.org/">PyYAML</a></li>
+<li><a href="http://bartaz.github.com/impress.js">impress.js</a></li>
+<li><a href="https://github.com/shama/jmpress.js/">jmpress.js</a></li>
+</ul>
 
   </div>
 
@@ -311,24 +289,14 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="16800" data-rotate="180" data-scale="1">
   
+<h2>Custom Theme</h2>
+<p>WeakPoint uses <a href="http://jinja.pocoo.org/">Jinja2</a> as a templete engine.</p>
+<p>You can get the content of slides by writing:</p>
+<div class="highlight"><pre>{% for slide in slides %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>{{ slide.content }}<span class="nt">&lt;/div&gt;</span>
+{% endfor %}
+</pre></div>
 
-<p>The template code behind <a href="http://blog.chengyichao.info/weakpoint/light">this slideshow</a> looks like:</p>
-
-<pre><code>{% if slide.section == 0 %}
-    &lt;div class=&quot;step&quot; data-x=&quot;2200&quot; 
-                      data-y=&quot;{{ slide.chapter*3000 - 1000}}&quot;
-                      data-rotate=&quot;-90&quot;
-                      data-scale=&quot;4&quot;&gt;
-    {{ slide.content }}&lt;/div&gt;
-{% else %}
-    &lt;div class=&quot;step&quot; data-x=&quot;3000&quot;
-                      data-y=&quot;{{ slide.chapter * 3000 +
-                                      slide.section * 600 - 1000 }}&quot;
-                      data-rotate=&quot;0&quot;
-                      data-scale=&quot;1&quot;&gt;
-    {{ slide.content }}&lt;/div&gt;
-{% endif %}
-</code></pre>
 
 
   </div>
@@ -342,9 +310,7 @@ with <code>-t</code> option:</p>
 
   <div class="step" data-x="18000" data-rotate="270" data-scale="1">
   
-
-<h1>Thank you</h1>
-
+<h1>Thanks</h1>
   </div>
 
 <!--================================slide==============================-->
@@ -361,8 +327,15 @@ with <code>-t</code> option:</p>
 
    </div>
 
-  <script src="assets/js/impress.js" type="text/javascript"></script>
-<script>impress().init();</script>
+  
+<script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="assets/js/jmpress.js" type="text/javascript"></script>
+<script>
+$(function() {
+  $('#jmpress').jmpress();
+});
+</script>
+
 
 <a href="https://github.com/onesuper/weakpoint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 </body>

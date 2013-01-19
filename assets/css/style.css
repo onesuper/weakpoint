@@ -1,7 +1,8 @@
-html {
+body {
+    font-family: 'PT Serif', Georgia, serif;
     background: -webkit-linear-gradient(top, #272727 0%,#444 50%, #444 50%, #272727 100%);
     background: -moz-linear-gradient(top, #2727272 0%, #444 50%, #444 50%, #272727 100%);    
-    font-family: 'PT Serif', Georgia, serif;
+
     color: #d9d9d9;
 }
 
@@ -30,7 +31,7 @@ html {
 .meta {
     font-size: 35px;
     text-align:center;
-    
+    color: white;
 }
 
 
@@ -41,11 +42,13 @@ ul, ol, p {
     text-shadow: 1px 1px 1px #333333;
 }
 
-
+.title {
+    color: white;
+}
 
 h1, h2, h3, h4 {
     font-weight: bold;
-    font-family: 'PT Serif', Georgia, serif;
+    font-family: Georgia, Helvetica, Arial, serif;
     color: white;
 }
 
@@ -85,7 +88,7 @@ code {
     background: #DDDDDD;
     color: black;
     text-shadow: none;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .navi {
@@ -121,7 +124,7 @@ code {
 }
 
 
-.step strong {
+#ing b {
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -130,7 +133,7 @@ code {
     transition:         0.5s;
 }
 
-.step.present strong {
+#ing.present b {
     -webkit-transform: rotate(-10deg);
     -moz-transform:    rotate(-10deg);
     -ms-transform:     rotate(-10deg);
