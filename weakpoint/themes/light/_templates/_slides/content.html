@@ -7,14 +7,14 @@
 
 {% if slide.section == 0 %}
 
-<div class="step" data-x="2200" data-y="{{ slide.chapter*3000 - 1000}}" data-rotate="-90" data-scale="4">
+<div class="step" data-x="{{ slide.x }}" data-y="{{ slide.y }}" data-rotate="{{ slide.rotate }}" data-scale="{{ slide.scale }}">
 {{ slide.content }}
 </div>
 
 {% else %}
 
 
-<div class="step" data-x="3000" data-y="{{slide.chapter * 3000 + slide.section * 600 - 1000 }}" data-rotate="0" data-scale="1">
+<div class="step" data-x="{{ slide.x }}" data-y="{{ slide.y }}" data-rotate="{{ slide.rotate }}" data-scale="{{ slide.scale }}">
 {{ slide.content }}
 </div>
 
@@ -31,7 +31,6 @@
 
 
 
-</div>
 
 
 {% endif %}

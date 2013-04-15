@@ -6,7 +6,7 @@ from pkg_resources import resource_filename, load_entry_point
 
 
 from weakpoint import __version__
-from weakpoint.fs import Directory, File 
+from weakpoint.fs import Directory, File
 from weakpoint.utils import normpath
 from weakpoint.config import Config
 from weakpoint.parsers import markdown_parser, misaka_parser
@@ -21,8 +21,7 @@ import sys
 
 
 class WeakPoint(object):
-    # in case read key error, we make some 
-    # default choices
+    # in case read key error, we make some default choices
     default_config = {
         'markup': 'misaka',
         'engine': 'jmpress'
@@ -37,19 +36,19 @@ class WeakPoint(object):
     generate index.html in the src
     '''
     def generate(self):
-        self.src = Directory('.')   
-        
-        # load the config file before generate 
+        self.src = Directory('.')
+
+        # load the config file before generate
         self._load_config()
-        
-        # markdown => html 
+
+        # markdown => html
         html = self._parse()
 
         # html => slides + navi
-        htmldump = Slides(html) 
+        htmldump = Slides(html)
         slides = htmldump.slides
         navi = htmldump.navi
-        
+
         # variables + slides (render)
         variables = {}
         variables.update(self.config)
@@ -61,9 +60,7 @@ class WeakPoint(object):
         out = File('index.html')
         if out.exists:
             out.rm()
-        File('index.html', rendered).mk() 
-        
-         
+        File('index.html', rendered).mk()
 
     def init(self):
         self.dest = Directory(self.opts['dest'])
@@ -75,8 +72,6 @@ class WeakPoint(object):
         # copy the ./theme/{theme} to the dest
         self.src.cp(self.dest.path)
 
-
-
     def _render(self, variables):
 
         try:
@@ -84,7 +79,6 @@ class WeakPoint(object):
         except RendererException, e:
             print e
             sys.exit(1)
-        
 
     def _parse(self):
 
@@ -126,13 +120,13 @@ class WeakPoint(object):
         parser.add_argument('-V', '--version', action = 'version',
                             version = '{0}'.format(__version__),
                             help = 'Show %(prog)s\'s version.')
-        
+
 
         # gen
         gen = subparser.add_parser('gen')
         gen.set_defaults(func = self.generate)
-        
-        
+
+
         # init
         init = subparser.add_parser('init')
         init.set_defaults(func = self.init)
@@ -151,6 +145,6 @@ class WeakPoint(object):
                 if isinstance(value, str):
                     value = value.decode('utf-8')
                 opts[option] = value
-        
+
         return opts
-        
+
