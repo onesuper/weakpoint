@@ -19,7 +19,7 @@ class Renderer(object):
             template = self.environment.get_template(template)
         except TemplateNotFound:
             raise RendererException('Template not found')
-        
+
         return template.render(**vars_)
 
 
